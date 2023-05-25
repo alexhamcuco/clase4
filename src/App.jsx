@@ -1,15 +1,39 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Text } from '@chakra-ui/react'
-import Navbar from './components/Navbar/Navbar.jsx'
+import Navbar from './components/Navbar/navbar.jsx'
 import { Route, Routes } from 'react-router-dom'
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import { MdBuild, MdCall } from "react-icons/md"
+import db from "../DB/firebase-config"
+import { collection, getDocs } from 'firebase/firestore'
 // import { Grid, GridItem } from '@chakra-ui/react'
 // import { Bottom Card CardBody CardFooter} from '@chakra-ui/react'
-
-import { Button, Card, CardBody, CardFooter } from '@chakra-ui/react'
-import { Grid, GridItem } from '@chakra-ui/react'
+import TarjetaComponente from './components/Card/TarjetaComponente.jsx'
 
 function App() {
+  const [materiales, setMateriales] = useState([])
+  const materialesRef = collection(db, "materiales")
+  const getMateriales = async () => {
+    const materialesLista = await getDocs(materialesRef)
+    const materiales = materialesLista.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id
+    }))
+    // console.log(materiales)
+    setMateriales(materiales)
+
+  }
+
+  useEffect(() => {
+    getMateriales()
+
+
+
+  }, [])
+
+  console.log(materiales)
+
 
 
   return (
@@ -17,28 +41,18 @@ function App() {
 
       <div>
         <Navbar />
-        <GridItem />
-        <Card>
-          <CardBody>
-            <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="" />
-          </CardBody>
-          <CardFooter>
-            <Text>Pedir perdón en España</Text>
-            <Button colorScheme='blue'>PODCAST</Button>
-          </CardFooter>
-        </Card>
 
-        <GridItem />
 
         <Routes>
-          <Route path='/contactos' element={<h1>contacto</h1>} />
+          <Route path='/contactos' element={<h1>contactooooo</h1>} />
           <Route path='/materiales' element={<h1>materiales</h1>} />
-          <Route path='/card' element={<h1>Card</h1>} />
+          <Route path='/cards' element={<TarjetaComponente />} />
 
         </Routes>
-        <Text fontSize='6xl' sx={{ color: 'red' }} > Spanish with alex
 
+        <Text fontSize='6x2' sx={{ color: 'red' }} > Spanish with alex
         </Text>
+        <Button leftIcon={<MdBuild />} colorScheme='red' size='lg'> Púlsame </Button>
 
       </div >
 

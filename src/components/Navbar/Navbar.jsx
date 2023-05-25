@@ -5,8 +5,10 @@ const Navbar = () => {
     return (
         <div>
             <h1>prueba</h1>
-            <Link to='/contactos'>contacto</Link>
-            <Link to='/materiales'>materiales</Link>
+            <Link to='/contactos'>contacto  </Link>
+            <Link to='/materiales'>materiales </Link>
+            <Link to='/cards'>cards</Link>
+
         </div>
 
     )
