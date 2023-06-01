@@ -10,6 +10,7 @@ import { collection, getDocs } from 'firebase/firestore'
 // import { Grid, GridItem } from '@chakra-ui/react'
 // import { Bottom Card CardBody CardFooter} from '@chakra-ui/react'
 import TarjetaComponente from './components/Card/TarjetaComponente.jsx'
+import Datos from './components/DatosMateriales/Datos'
 
 function App() {
   const [materiales, setMateriales] = useState([])
@@ -31,9 +32,7 @@ function App() {
 
 
   }, [])
-
   console.log(materiales)
-
 
 
   return (
@@ -45,7 +44,7 @@ function App() {
 
         <Routes>
           <Route path='/contactos' element={<h1>contactooooo</h1>} />
-          <Route path='/materiales' element={<h1>materiales</h1>} />
+          <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/cards' element={<TarjetaComponente />} />
 
         </Routes>
@@ -59,5 +58,6 @@ function App() {
     </>
   )
 }
+
 
 export default App
