@@ -12,8 +12,13 @@ import { collection, getDocs } from 'firebase/firestore'
 import TarjetaComponente from './components/Card/TarjetaComponente.jsx'
 import Datos from './components/DatosMateriales/Datos'
 import TextoComponente from './components/Texto/TextoComponente'
-import SeryEstarParte1 from './components/PaginasTarjetas/SeryEstarParte1'
-import CardDetalle from './components/CardDetalle/CardDetalle'
+import CardDetalleEjercicio from './components/CardDetalle/CardDetalleEjercicio'
+import CardDetallePodcast from './components/CardDetalle/CardDetallePodcast'
+import CardDetalleTexto from './components/CardDetalle/CardDetalleTexto'
+import CardDetalleVideo from './components/CardDetalle/CardDetalleVideo'
+import CardDetallePodcasts from './components/CardGrupo/CardDetallePodcasts'
+import CardDetalleTextos from './components/CardGrupo/CardDetalleTextos'
+
 
 
 
@@ -24,14 +29,14 @@ import CardDetalle from './components/CardDetalle/CardDetalle'
 function App() {
 
   //paginacion
-  //javascript slice materialsnumber.slice(3, 6)
-  const [materialsData, setMaterialsData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostsPerPage] = useState(3)
+  // //javascript slice materialsnumber.slice(3, 6)
+  // const [materialsData, setMaterialsData] = useState([]);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [postPerPage, setPostsPerPage] = useState(3)
 
-  const lastPostIndex = currentPage * setPostsPerPage;
-  const firstpostIndex = lastPostIndex - setPostsPerPage;
-  const currentPosts = materialsData.slice(firstpostIndex, lastPostIndex)
+  // const lastPostIndex = currentPage * setPostsPerPage;
+  // const firstpostIndex = lastPostIndex - setPostsPerPage;
+  // const currentPosts = materialsData.slice(firstpostIndex, lastPostIndex)
 
 
 
@@ -73,8 +78,22 @@ function App() {
           <Route path='/texto' element={<Datos materiales={materiales} />} />
           <Route path='/cards' element={<h1>putas cards</h1>} />
           <Route path='/suscripcion' element={<TextoComponente />} />
-          <Route path='/materiales/podcast/:titulo' element={<CardDetalle materiales={materiales} />} />
 
+          <Route path='/materiales/ejercicio/:tituloEjercicio' element={<CardDetalleEjercicio materiales={materiales} />} />
+          <Route path='/materiales/podcast/:tituloPodcast' element={<CardDetallePodcast materiales={materiales} />} />
+          <Route path='/materiales/texto/:tituloTexto' element={<CardDetalleTexto materiales={materiales} />} />
+          <Route path='/materiales/video/:tituloVideo' element={<CardDetalleVideo materiales={materiales} />} />
+
+
+
+
+          <Route path='/materiales/ejercicios/:tituloEjercicios' element={<CardDetalleEjercicios materiales={materiales} />} />
+          <Route path='/materiales/podcasts/:tituloPodcasts' element={<CardDetallePodcasts materiales={materiales} />} />
+          <Route path='/materiales/textos/:tituloTextos' element={<CardDetalleTextos materiales={materiales} />} />
+          <Route path='/materiales/videos/:tituloVideos' element={<CardDetalleVideos materiales={materiales} />} />
+
+
+//deberes, acabar las rutas para /materiales/texto /materiales/video
         </Routes>
 
         <Text fontSize='6x2' sx={{ color: 'red' }} > Spanish with alex

@@ -2,9 +2,9 @@ import React from 'react'
 import { Card, CardBody, Text, CardFooter, Button } from '@chakra-ui/react'
 import { Link, useParams } from 'react-router-dom'
 
-const CardDetalle = ({ materiales }) => {
-    const { titulo } = useParams()
-    const material = materiales.find(material => material.urlTitulo === titulo)
+const CardDetallePodcasts = ({ materiales }) => {
+    const { tituloPodcasts } = useParams()
+    const material = materiales.find(material => material.tipo === tituloPodcasts)
     return (
 
         <div>
@@ -29,7 +29,7 @@ const CardDetalle = ({ materiales }) => {
     )
 }
 
-export default CardDetalle
+export default CardDetallePodcasts
 
 
 //deberes agregar urlTitulo en firebase
