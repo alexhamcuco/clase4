@@ -1,13 +1,14 @@
-import React from "react";
-import { Button, Card, CardBody, CardFooter } from '@chakra-ui/react'
-import { Text, Grid, GridItem } from '@chakra-ui/react'
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Card, CardBody, Text, CardFooter, Button } from '@chakra-ui/react'
+import { Link, useParams } from 'react-router-dom'
 
-
-
-const TarjetaComponente = ({ material }) => {
+const CardDetalle = ({ materiales }) => {
+    const { titulo } = useParams()
+    const material = materiales.find(material => material.urlTitulo === titulo)
     return (
+
         <div>
+
 
             <Card>
                 <CardBody>
@@ -24,10 +25,12 @@ const TarjetaComponente = ({ material }) => {
                 </CardFooter>
             </Card>
 
-
-        </div >
-
+        </div>
     )
 }
 
-export default TarjetaComponente
+export default CardDetalle
+
+
+//deberes agregar urlTitulo en firebase
+//deberes agregar boton de volver para ir a materiales despues de entrar en el podcast. 
