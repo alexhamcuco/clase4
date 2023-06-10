@@ -23,3 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 *firebase-config.json
+/DB/firebase-config.json
