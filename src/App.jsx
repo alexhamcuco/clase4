@@ -12,12 +12,16 @@ import { collection, getDocs } from 'firebase/firestore'
 import TarjetaComponente from './components/Card/TarjetaComponente.jsx'
 import Datos from './components/DatosMateriales/Datos'
 import TextoComponente from './components/Texto/TextoComponente'
+
 import CardDetalleEjercicio from './components/CardDetalle/CardDetalleEjercicio'
 import CardDetallePodcast from './components/CardDetalle/CardDetallePodcast'
 import CardDetalleTexto from './components/CardDetalle/CardDetalleTexto'
 import CardDetalleVideo from './components/CardDetalle/CardDetalleVideo'
-import CardDetallePodcasts from './components/CardGrupo/CardDetallePodcasts'
-import CardDetalleTextos from './components/CardGrupo/CardDetalleTextos'
+
+import CardGrupoEjercicios from './components/CardGrupo/CardGrupoEjercicios'
+import CardGrupoPodcasts from './components/CardGrupo/CardGrupoPodcasts'
+import CardGrupoTextos from './components/CardGrupo/CardGrupoTextos'
+import CardGrupoVideos from './components/CardGrupo/CardGrupoVideos'
 
 
 
@@ -71,10 +75,11 @@ function App() {
 
 
         <Routes>
+
           <Route path='/contactos' element={<h1>contactooooo</h1>} />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/podcast' element={<Datos materiales={materiales} />} />
-          <Route path='/videos' element={<Datos materiales={materiales} />} />
+          <Route path='/video' element={<Datos materiales={materiales} />} />
           <Route path='/texto' element={<Datos materiales={materiales} />} />
           <Route path='/cards' element={<h1>putas cards</h1>} />
           <Route path='/suscripcion' element={<TextoComponente />} />
@@ -84,13 +89,10 @@ function App() {
           <Route path='/materiales/texto/:tituloTexto' element={<CardDetalleTexto materiales={materiales} />} />
           <Route path='/materiales/video/:tituloVideo' element={<CardDetalleVideo materiales={materiales} />} />
 
-
-
-
-          <Route path='/materiales/ejercicios/:tituloEjercicios' element={<CardDetalleEjercicios materiales={materiales} />} />
-          <Route path='/materiales/podcasts/:tituloPodcasts' element={<CardDetallePodcasts materiales={materiales} />} />
-          <Route path='/materiales/textos/:tituloTextos' element={<CardDetalleTextos materiales={materiales} />} />
-          <Route path='/materiales/videos/:tituloVideos' element={<CardDetalleVideos materiales={materiales} />} />
+          <Route path='/materiales/ejercicios' element={<CardGrupoEjercicios materiales={materiales} tipo="EJERCICIO" />} />
+          <Route path='/materiales/podcasts' element={<CardGrupoPodcasts materiales={materiales} tipo="PODCAST" />} />
+          <Route path='/materiales/textos' element={<CardGrupoTextos materiales={materiales} tipo="TEXTO" />} />
+          <Route path='/materiales/videos' element={<CardGrupoVideos materiales={materiales} tipo="VIDEO" />} />
 
 
 //deberes, acabar las rutas para /materiales/texto /materiales/video
