@@ -18,5 +18,10 @@ const CardGrupoEjercicios = ({ materiales, tipo }) => {
 }
 
 export default CardGrupoEjercicios
+
+
+
+
+
 //deberes agregar urlTitulo en firebase
 //deberes agregar boton de volver para ir a materiales despues de entrar en el podcast. 
