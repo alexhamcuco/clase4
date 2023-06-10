@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 const firebaseConfig = {
-	apiKey: 'AIzaSyB5ZZ7pJa9nM2XLnY6HD0I5WdRppbCV8dQ',
+	apiKey: 
 	authDomain: 'spanish-with-alex.firebaseapp.com',
 	projectId: 'spanish-with-alex',
 	storageBucket: 'spanish-with-alex.appspot.com',
