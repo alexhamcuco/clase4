@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { MdBuild, MdCall } from "react-icons/md"
 import db from "../DB/firebase-config"
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, addDoc } from 'firebase/firestore'
 // import { Grid, GridItem } from '@chakra-ui/react'
 // import { Bottom Card CardBody CardFooter} from '@chakra-ui/react'
 import TarjetaComponente from './components/Card/TarjetaComponente.jsx'
@@ -32,21 +32,45 @@ import CardGrupoVideos from './components/CardGrupo/CardGrupoVideos'
 
 function App() {
 
-  //paginacion
-  // //javascript slice materialsnumber.slice(3, 6)
-  // const [materialsData, setMaterialsData] = useState([]);
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [postPerPage, setPostsPerPage] = useState(3)
 
-  // const lastPostIndex = currentPage * setPostsPerPage;
-  // const firstpostIndex = lastPostIndex - setPostsPerPage;
-  // const currentPosts = materialsData.slice(firstpostIndex, lastPostIndex)
 
+  // collection reference
+  const colRef = collection(db, 'books')
+
+  //get collection data
+  getDocs(colRef)
+    .then((snapshot) => {
+      let books = []
+      snapshot.docs.forEach((doc) => {
+        books.push({ ...doc.data(), id: doc.id })
+      })
+      console.log(books)
+    })
+    .catch(err => {
+      console.log(err.message)
+    })
+
+  // adding nuevo libro
+  const addBookForm = document.querySelector('.add')
+  addBookForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(addBookForm)
+
+    addDoc(colRef, {
+      title: addBookForm.title.value,
+      author: addBookForm.author.value,
+    })
+      .then(() => {
+        addBookForm.reset()
+      })
+
+  })
 
 
   //firebase materiales (objeto con los datos de las tarjetas)
   const [materiales, setMateriales] = useState([])
   const materialesRef = collection(db, "materiales")
+
   const getMateriales = async () => {
     const materialesLista = await getDocs(materialesRef)
     const materiales = materialesLista.docs.map((doc) => ({
@@ -95,7 +119,6 @@ function App() {
           <Route path='/materiales/videos' element={<CardGrupoVideos materiales={materiales} tipo="VIDEO" />} />
 
 
-//deberes, acabar las rutas para /materiales/texto /materiales/video
         </Routes>
 
         <Text fontSize='6x2' sx={{ color: 'red' }} > Spanish with alex
@@ -107,6 +130,8 @@ function App() {
     </>
   )
 }
+
+
 
 
 export default App

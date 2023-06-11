@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 *firebase-config.json
 /DB/firebase-config.json
+/SDK/firebase-SDKanalitics.js
