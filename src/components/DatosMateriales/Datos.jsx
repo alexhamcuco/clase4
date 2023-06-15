@@ -1,12 +1,22 @@
 import React from "react";
+
 import TarjetaComponente from "../Card/TarjetaComponente";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useInstantLayoutTransition } from "framer-motion";
+import { useParams } from "react-router-dom";
 const Datos = ({ materiales }) => {
+
+
+    const { tipo } = useParams()
+    console.log(tipo)
+    let materialesFiltrados = materiales
+    if (tipo) {
+        materialesFiltrados = materiales.filter((material) => material.tipo === tipo)
+    }
     return (
         < Grid templateColumns='repeat(3, 1fr)' gap={6} >
             {
-                materiales.map((material) => <TarjetaComponente material={material} key={material.id} />)
+                materialesFiltrados.map((material) => <TarjetaComponente material={material} key={material.id} />)
             }
         </Grid>
     )

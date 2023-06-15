@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, CardBody, CardFooter } from '@chakra-ui/react'
-import { Text, Grid, GridItem } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 
 

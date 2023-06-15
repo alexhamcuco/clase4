@@ -1,19 +1,14 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ materiales }) => {
+
+
     return (
         <div>
-            <h1>prueba de tu puta madre</h1>
             <Link to='/contactos'>contacto  </Link>
-            <Link to='/materiales'>materiales </Link>
-            <Link to='/materiales/ejercicios'>ejercicios </Link>
-            <Link to='/materiales/podcasts'>podcasts </Link>
-            <Link to='/materiales/textos'>textos </Link>
-            <Link to='/materiales/videos'>videos </Link>
-
-
-            <Link to='/cards'>cards  </Link>
+            <Link to='/materiales/'>materiales </Link>
+            {materiales.map((material) => (<Link to={`/materiales/${material.tipo}`}> {material.tipo} </Link>))}
             <Link to='/suscripcion'>suscripcion</Link>
 
         </div>
