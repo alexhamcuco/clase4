@@ -16,7 +16,7 @@ const CardDetalleTexto = ({ materiales }) => {
                 </CardBody>
                 <CardFooter>
                     <Text> {material.titulo} </Text>
-                    <Link to={material.tipo.toLowerCase() + '/' + material.urlTitulo}>
+                    <Link to={material.tipo + '/' + material.urlTitulo}>
                         <Button colorScheme='blue'> {material.tipo}
 
                         </Button>
