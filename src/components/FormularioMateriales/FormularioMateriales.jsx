@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getDocs, addDoc, collection, query, where, onSnapshot } from 'firebase/firestore';
 import db from '../../../DB/firebase-config';
-import { Button } from '@chakra-ui/react';
+import { Button, Input } from '@chakra-ui/react';
 
 function Formulario() {
     const [nivelMaterial, setNivelMaterial] = useState('');
@@ -67,8 +67,8 @@ function Formulario() {
     return (
         <div>
             <form className='add' onSubmit={handleSubmit}>
-                <label htmlFor='nivelMaterial'>Nivel:</label>
-                <input
+                <label htmlFor='nivelMaterial'>Nivel: </label>
+                <Input htmlSize={4} width='auto'
                     type='text'
                     id='nivelMaterial'
                     name='nivelMaterial'
@@ -78,8 +78,8 @@ function Formulario() {
                 />
                 <br />
 
-                <label htmlFor='tipoMaterial'>Tipo:</label>
-                <input
+                <label htmlFor='tipoMaterial'>Tipo: </label>
+                <Input htmlSize={4} width='auto'
                     type='text'
                     id='tipoMaterial'
                     name='tipoMaterial'
@@ -87,8 +87,8 @@ function Formulario() {
                     value={tipoMaterial}
                     onChange={(event) => setTipoMaterial(event.target.value)}
                 />
-                <br />  <label htmlFor='tituloMaterial'>Titulo:</label>
-                <input
+                <br />  <label htmlFor='tituloMaterial'>Titulo: </label>
+                <Input htmlSize={4} width='auto'
                     type='text'
                     id='tituloMaterial'
                     name='tituloMaterial'
@@ -96,8 +96,8 @@ function Formulario() {
                     value={tituloMaterial}
                     onChange={(event) => setTituloMaterial(event.target.value)}
                 />
-                <br />  <label htmlFor='urlMaterial'>Url:</label>
-                <input
+                <br />  <label htmlFor='urlMaterial'>Url: </label>
+                <Input htmlSize={4} width='auto'
                     type='text'
                     id='urlMaterial'
                     name='urlMaterial'
@@ -105,8 +105,8 @@ function Formulario() {
                     value={urlMaterial}
                     onChange={(event) => setUrlMaterial(event.target.value)}
                 />
-                <br />  <label htmlFor='urlTituloMaterial'> Url Titulo:</label>
-                <input
+                <br />  <label htmlFor='urlTituloMaterial'> Url Titulo: </label>
+                <Input htmlSize={4} width='auto'
                     type='text'
                     id='urlTituloMaterial'
                     name='urlTituloMaterial'
@@ -114,9 +114,9 @@ function Formulario() {
                     value={urlTituloMaterial}
                     onChange={(event) => setUrlTituloMaterial(event.target.value)}
                 />
-                <br />  <label htmlFor='fechaMaterial'>Fecha:</label>
-                <input
-                    type='text'
+                <br />  <label htmlFor='fechaMaterial'>Fecha: </label>
+                <Input htmlSize={4} width='auto'
+                    type='datetime-local'
                     id='fechaMaterial'
                     name='fechaMaterial'
                     required
