@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const Navbar = ({ materiales }) => {
+
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
 
 
@@ -11,6 +12,7 @@ const Navbar = ({ materiales }) => {
             <Link to='/materiales/'>materiales </Link>
             {uniqueTypes.map((tipo) => (<Link to={`/materiales/${tipo}`}> {tipo} </Link>))}
             <Link to='/suscripcion'>suscripcion</Link>
+            <Link to='/FormularioMateriales'> FormularioMateriales  </Link>
 
         </div>
 

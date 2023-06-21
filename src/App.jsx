@@ -13,6 +13,7 @@ import CardDetalleEjercicio from './components/CardDetalle/CardDetalleEjercicio'
 import CardDetallePodcast from './components/CardDetalle/CardDetallePodcast'
 import CardDetalleTexto from './components/CardDetalle/CardDetalleTexto'
 import CardDetalleVideo from './components/CardDetalle/CardDetalleVideo'
+import FormularioMateriales from './components/FormularioMateriales/FormularioMateriales'
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
 
           <Route path='/cards' element={<h1>putas cards</h1>} />
           <Route path='/suscripcion' element={<TextoComponente />} />
+          <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
 
           <Route path='/materiales/:tipo/:tituloEjercicio' element={<CardDetalleEjercicio materiales={materiales} />} />
 
