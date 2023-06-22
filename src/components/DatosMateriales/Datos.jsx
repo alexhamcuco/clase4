@@ -1,3 +1,6 @@
+//este componente recibe todos los materiales, y muestra todos y los materiales segun su tipo. 
+
+
 import React from "react";
 
 import TarjetaComponente from "../Card/TarjetaComponente";
@@ -9,6 +12,7 @@ const Datos = ({ materiales }) => {
 
     const { tipo } = useParams()
     console.log(tipo)
+
     let materialesFiltrados = materiales
     if (tipo) {
         materialesFiltrados = materiales.filter((material) => material.tipo === tipo)

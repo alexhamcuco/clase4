@@ -9,7 +9,7 @@ const Navbar = ({ materiales }) => {
     return (
         <div>
             <Link to='/contactos'>contacto  </Link>
-            <Link to='/materiales/'>materiales </Link>
+            <Link to='/materiales'>materiales </Link>
             {uniqueTypes.map((tipo) => (<Link to={`/materiales/${tipo}`}> {tipo} </Link>))}
             <Link to='/suscripcion'>suscripcion</Link>
             <Link to='/FormularioMateriales'> FormularioMateriales  </Link>

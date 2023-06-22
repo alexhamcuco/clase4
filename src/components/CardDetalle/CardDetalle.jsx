@@ -1,3 +1,5 @@
+//este el es componente de vista individual
+
 import React from 'react'
 import { Card, CardBody, Text, CardFooter, Button } from '@chakra-ui/react'
 import { Link, useParams } from 'react-router-dom'
@@ -9,18 +11,12 @@ const CardDetalleEjercicio = ({ materiales }) => {
 
         <div>
 
-
             <Card>
                 <CardBody>
                     <img src={material.url} alt="" />
                 </CardBody>
                 <CardFooter>
                     <Text> {material.titulo} </Text>
-                    <Link to={material.tipo + '/' + material.urlTitulo}>
-                        <Button colorScheme='blue'> {material.tipo}
-
-                        </Button>
-                    </Link>
 
                 </CardFooter>
             </Card>

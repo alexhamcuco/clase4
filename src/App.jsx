@@ -9,11 +9,8 @@ import db from "../DB/firebase-config"
 import { collection, getDocs, addDoc } from 'firebase/firestore'
 import Datos from './components/DatosMateriales/Datos'
 import TextoComponente from './components/Texto/TextoComponente'
-import CardDetalleEjercicio from './components/CardDetalle/CardDetalleEjercicio'
-import CardDetallePodcast from './components/CardDetalle/CardDetallePodcast'
-import CardDetalleTexto from './components/CardDetalle/CardDetalleTexto'
-import CardDetalleVideo from './components/CardDetalle/CardDetalleVideo'
 import FormularioMateriales from './components/FormularioMateriales/FormularioMateriales'
+import TarjetaComponente from './components/Card/TarjetaComponente'
 
 
 function App() {
@@ -54,12 +51,10 @@ function App() {
           <Route path='/contactos' element={<h1>contactooooo</h1>} />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
-
           <Route path='/cards' element={<h1>putas cards</h1>} />
           <Route path='/suscripcion' element={<TextoComponente />} />
           <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
-
-          <Route path='/materiales/:tipo/:tituloEjercicio' element={<CardDetalleEjercicio materiales={materiales} />} />
+          <Route path='/materiales/:tipo/:titulo' element={<TarjetaComponente materiales={materiales} />} />
 
 
 
