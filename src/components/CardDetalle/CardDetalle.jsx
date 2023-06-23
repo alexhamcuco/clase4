@@ -29,4 +29,6 @@ export default CardDetalleEjercicio
 
 
 //deberes agregar urlTitulo en firebase
-//deberes agregar boton de volver para ir a materiales despues de entrar en el podcast. 
+//deberes agregar boton de volver para ir a materiales despues de entrar en el podcast.
+//deberes crear una base de datos con verbos y conjugaciones, finales de verbos...
+//deberes limpiar codigo

@@ -15,15 +15,7 @@ const TextoComponente = () => {
 
             <Text fontSize='6x2' sx={{ color: 'red' }} > Spanish with alex </Text>
             <Button leftIcon={<MdBuild />} colorScheme='red' size='lg'> Púlsame pero soy inutil </Button>
-            {/* <form class="add">
-                <label for="title">titulo</label>
-                <input type="text" name="title" required></input>
-                <label for="author">autor:</label>
-                <input type="text" name="author" required></input> */}
 
-            {/* <button>add new book</button>
-
-        </form> */}
 
         </div >
 

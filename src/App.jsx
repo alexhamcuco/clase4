@@ -15,9 +15,6 @@ import TarjetaComponente from './components/Card/TarjetaComponente'
 
 function App() {
 
-
-
-
   //firebase materiales (objeto con los datos de las tarjetas)
   const [materiales, setMateriales] = useState([])
   const materialesRef = collection(db, "materiales")
@@ -48,7 +45,7 @@ function App() {
 
         <Routes>
 
-          <Route path='/contactos' element={<h1>contactooooo</h1>} />
+          <Route path='/home' element={<h1>HOME</h1>} />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
           <Route path='/cards' element={<h1>putas cards</h1>} />

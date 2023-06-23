@@ -9,7 +9,6 @@ import { useInstantLayoutTransition } from "framer-motion";
 import { useParams } from "react-router-dom";
 const Datos = ({ materiales }) => {
 
-
     const { tipo } = useParams()
     console.log(tipo)
 
