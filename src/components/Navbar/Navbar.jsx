@@ -9,17 +9,20 @@ const Navbar = ({ materiales }) => {
 
 
     return (
-        <Flex bg="gray.800" p="4" align="center">
+        <Flex bg="gray.800" p="4" align="center" justify="space-between">
+            <ChakraLink
+                as={ReactRouterLink}
+                to="/home"
+                color="white"
+                mr="4"
+                _hover={{ color: "red.500" }}
+            >
+                HOME
+            </ChakraLink>
+
             <Box>
-                <ChakraLink
-                    as={ReactRouterLink}
-                    to="/home"
-                    color="white"
-                    mr="4"
-                    _hover={{ color: "red.500" }}
-                >
-                    HOME
-                </ChakraLink>
+
+
                 {/* <ChakraLink
                     as={ReactRouterLink}
                     to="/materiales"
@@ -41,8 +44,8 @@ const Navbar = ({ materiales }) => {
                         {tipo}
                     </ChakraLink>
                 ))} */}
-//prueba menú
-                <Menu>
+                {/* //prueba menú */}
+                <Menu >
                     <MenuButton as={ChakraLink} color="white" mr="4" _hover={{ color: "red.500" }}>
                         Materiales
                     </MenuButton>

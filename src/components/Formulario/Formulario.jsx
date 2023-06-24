@@ -4,6 +4,9 @@ import db from '../../../DB/firebase-config';
 import { Button } from '@chakra-ui/react';
 
 function Formulario() {
+
+
+
 	const [nombreUsuario, setNombreUsuario] = useState('');
 	const [edadUsuario, setEdadUsuario] = useState('');
 	const [correoUsuario, setCorreoUsuario] = useState('');

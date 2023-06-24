@@ -1,4 +1,6 @@
-//este componente recibe todos los materiales, y muestra todos y los materiales segun su tipo. 
+//este componente recibe todos los materiales, y muestra todos los materiales segun su tipo.
+//es el componente con el grid, muestra todos los materiales, esta llamando al componente
+//TarjetaComponente
 
 
 import React from "react";
