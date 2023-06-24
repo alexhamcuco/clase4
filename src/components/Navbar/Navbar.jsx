@@ -50,8 +50,15 @@ const Navbar = ({ materiales }) => {
                         Materiales
                     </MenuButton>
                     <MenuList>
+
+                        <MenuItem as={ReactRouterLink} to="/materiales" _hover={{ bg: "red.500", color: "white" }}>
+                            Todos los materiales
+                        </MenuItem>
+
                         {uniqueTypes.map((tipo) => (
-                            <MenuItem key={tipo} as={ReactRouterLink} to={`/materiales/${tipo}`}>
+                            <MenuItem key={tipo} as={ReactRouterLink} to={`/materiales/${tipo}`}
+                                _hover={{ bg: "red.500", color: "white" }}
+                            >
                                 {tipo}
                             </MenuItem>
                         ))}
