@@ -7,10 +7,10 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 import { MdBuild, MdCall } from "react-icons/md"
 import db from "../DB/firebase-config"
 import { collection, getDocs, addDoc } from 'firebase/firestore'
-import Datos from './components/DatosMateriales/Datos'
+import Datos from './components/Datos/Datos'
 import TextoComponente from './components/Texto/TextoComponente'
 import FormularioMateriales from './components/FormularioMateriales/FormularioMateriales'
-import TarjetaComponente from './components/Card/TarjetaComponente'
+import TarjetaComponente from './components/TarjetaComponente/TarjetaComponente'
 
 
 function App() {
