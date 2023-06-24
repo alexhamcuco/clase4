@@ -10,7 +10,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 const TarjetaComponente = ({ material }) => {
     const { tipo } = useParams()
     const path = useLocation()
-    console.log(tipo)
+    // console.log(tipo)
     return (
         <div>
 

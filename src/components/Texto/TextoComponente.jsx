@@ -1,3 +1,6 @@
+//muestra el formulario para registrarse como usuario, pendiente cambiar el nombre del componente por algo 
+//que esté más claro.
+
 import React from "react";
 import { Text } from '@chakra-ui/react'
 import Formulario from "../Formulario/Formulario";

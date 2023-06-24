@@ -5,14 +5,14 @@
 
 import React from "react";
 
-import TarjetaComponente from "../Card/TarjetaComponente";
+import TarjetaComponente from "../TarjetaComponente/TarjetaComponente";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useInstantLayoutTransition } from "framer-motion";
 import { useParams } from "react-router-dom";
 const Datos = ({ materiales }) => {
 
     const { tipo } = useParams()
-    console.log(tipo)
+    // console.log(tipo)
 
     let materialesFiltrados = materiales
     if (tipo) {
