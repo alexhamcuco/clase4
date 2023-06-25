@@ -11,8 +11,10 @@ import { useInstantLayoutTransition } from "framer-motion";
 import { useParams } from "react-router-dom";
 const Datos = ({ materiales }) => {
 
-    const { tipo } = useParams()
+    const { tipo } = useParams() //este tipo está viculado al path itinerado?
     // console.log(tipo)
+    // const { titulo } = useParams()   //estos son pruebas para intentar comprender
+    // console.log(titulo)                  
 
     let materialesFiltrados = materiales
     if (tipo) {

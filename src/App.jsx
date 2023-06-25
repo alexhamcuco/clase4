@@ -11,9 +11,17 @@ import Datos from './components/Datos/Datos'
 import TextoComponente from './components/Texto/TextoComponente'
 import FormularioMateriales from './components/FormularioMateriales/FormularioMateriales'
 import TarjetaComponente from './components/TarjetaComponente/TarjetaComponente'
+import ImagenPortadaComponente from './components/ImagenPortadaComponente/ImagenPortadaComponente'
+
 
 
 function App() {
+
+  //cargar la imagen de la portada del componente ImagenPortadaComponente
+  const imagenPortada = 'https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg'
+  //segunda imagen de portada pero en disco duro local
+  // const imagenPortada = './src/assets/imagenes/saliendoPortatil.png';
+
 
   //firebase materiales (objeto con los datos de las tarjetas)
   const [materiales, setMateriales] = useState([])
@@ -43,9 +51,10 @@ function App() {
 
         <Navbar materiales={materiales} />
 
+
         <Routes>
 
-          <Route path='/home' element={<h1>HOME</h1>} />
+          <Route path='/home' element={<ImagenPortadaComponente imagenPortada={imagenPortada} />} />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
           <Route path='/cards' element={<h1>putas cards</h1>} />
