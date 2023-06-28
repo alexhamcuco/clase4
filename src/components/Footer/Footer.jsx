@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Link } from "@chakra-ui/react";
 
 const Footer = () => {
     return (
@@ -7,35 +7,53 @@ const Footer = () => {
                 <Text fontSize="sm">© 2023 Spanish with Alex.</Text>
                 <Flex>
                     <Column title="Redes Sociales">
-                        <Link color="white" mr="4" _hover={{ color: "red.500" }}>
-                            Facebook
-                        </Link>
-                        <Link color="white" mr="4" _hover={{ color: "red.500" }}>
+                        <CustomLink
+                            href="https://www.youtube.com/@spanishwithalex"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Youtube
+                        </CustomLink>
+                        <CustomLink
+                            href="https://twitter.com/spanishwithalex"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Twitter
-                        </Link>
-                        <Link color="white" mr="4" _hover={{ color: "red.500" }}>
+                        </CustomLink>
+                        <CustomLink
+                            href="https://www.instagram.com/spanishwithalex"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Instagram
-                        </Link>
+                        </CustomLink>
                     </Column>
                     <Column title="Condiciones Legales">
-                        <Link color="white" mr="4" _hover={{ color: "red.500" }}>
-                            Términos y condiciones
-                        </Link>
-                        <Link color="white" _hover={{ color: "red.500" }}>
-                            Política de privacidad
-                        </Link>
+                        <CustomLink href="/terminos-y-condiciones">Términos y condiciones</CustomLink>
+                        <CustomLink href="/politica-de-privacidad">Política de privacidad</CustomLink>
                     </Column>
                     <Column title="Contacto">
-                        <Link color="white" mr="4" _hover={{ color: "red.500" }}>
-                            Email
-                        </Link>
-                        <Link color="white" _hover={{ color: "red.500" }}>
-                            Teléfono
-                        </Link>
+                        <CustomLink href="/contacto">Formulario de contacto</CustomLink>
                     </Column>
                 </Flex>
             </Flex>
         </Box>
+    );
+};
+
+const CustomLink = ({ href, children }) => {
+    return (
+        <Link
+            color="white"
+            mr="4"
+            _hover={{ color: "red.500" }}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            {children}
+        </Link>
     );
 };
 

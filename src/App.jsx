@@ -13,6 +13,7 @@ import FormularioMateriales from './components/FormularioMateriales/FormularioMa
 import TarjetaComponente from './components/TarjetaComponente/TarjetaComponente'
 import ImagenPortadaComponente from './components/ImagenPortadaComponente/ImagenPortadaComponente'
 import Footer from './components/Footer/Footer'
+import Testimonials from './components/Testimonials/Testimonials'
 
 //vite es el nuevo webpack, es un compilador de procesos. 
 //Vite preagrupa las dependencias de React
@@ -56,7 +57,12 @@ function App() {
 
         <Routes>
 
-          <Route path='/home' element={<ImagenPortadaComponente imagenPortada={imagenPortada} />} />
+          <Route path="/home" element={
+            <>
+              <ImagenPortadaComponente imagenPortada={imagenPortada} />
+              <Testimonials />
+            </>
+          } />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
           <Route path='/cards' element={<h1>putas cards</h1>} />
@@ -67,7 +73,6 @@ function App() {
 
 
         </Routes>
-
 
 
         <Footer />
