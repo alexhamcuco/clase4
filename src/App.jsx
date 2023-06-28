@@ -12,8 +12,10 @@ import TextoComponente from './components/Texto/TextoComponente'
 import FormularioMateriales from './components/FormularioMateriales/FormularioMateriales'
 import TarjetaComponente from './components/TarjetaComponente/TarjetaComponente'
 import ImagenPortadaComponente from './components/ImagenPortadaComponente/ImagenPortadaComponente'
+import Footer from './components/Footer/Footer'
 
-
+//vite es el nuevo webpack, es un compilador de procesos. 
+//Vite preagrupa las dependencias de React
 
 function App() {
 
@@ -66,6 +68,9 @@ function App() {
 
         </Routes>
 
+
+
+        <Footer />
       </div >
 
     </>

@@ -18,7 +18,7 @@ const ImagenPortadaComponente = ({ imagenPortada }) => {
         <div>
             <Box m="auto">
                 <motion.div
-                    initial={{ y: 10 }}
+                    initial={{ y: 22 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 1 }}
                 >
