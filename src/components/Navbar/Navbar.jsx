@@ -2,7 +2,7 @@ import { Link as ReactRouterLink } from "react-router-dom";
 import { Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-
+import "./Navbar.css"
 
 const Navbar = ({ materiales }) => {
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
@@ -22,6 +22,8 @@ const Navbar = ({ materiales }) => {
 
             <Box>
 
+                <h2>hola esto es un aprueba</h2>
+                <h2>hola esto es un aprueba</h2>
 
                 {/* <ChakraLink
                     as={ReactRouterLink}
