@@ -17,13 +17,13 @@ const Navbar = ({ materiales }) => {
                 mr="4"
                 _hover={{ color: "red.500" }}
             >
-                HOME
+                <h2>HOME</h2>
+
             </ChakraLink>
 
             <Box>
 
-                <h2>hola esto es un aprueba</h2>
-                <h2>hola esto es un aprueba</h2>
+
 
                 {/* <ChakraLink
                     as={ReactRouterLink}
