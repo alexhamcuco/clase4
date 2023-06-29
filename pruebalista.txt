@@ -1,0 +1,5 @@
+COSAS POR HACER
+
+-Paginacion.
+-Login usuario.
+-Metodo de Pago. 
