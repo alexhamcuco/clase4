@@ -3,3 +3,4 @@ COSAS POR HACER
 -Paginacion.
 -Login usuario.
 -Metodo de Pago. 
+-borrar y editar en la base de datos. 
