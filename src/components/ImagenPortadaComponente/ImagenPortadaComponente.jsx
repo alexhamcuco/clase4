@@ -1,9 +1,9 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import imagenPortada from '../../assets/imagenes/cards/avionRetraso.jpg'
 
-
-const ImagenPortadaComponente = ({ imagenPortada }) => {
+const ImagenPortadaComponente = () => {
     //  Debes desestructurar la prop imagenPortada poniendole { imagenPortada }  en el
     //  componente para obtener la URL de la imagen. 
     //  Actualmente, estás pasando la prop como argumento, sin corchetes, 

@@ -21,9 +21,11 @@ import Testimonials from './components/Testimonials/Testimonials'
 function App() {
 
   //cargar la imagen de la portada del componente ImagenPortadaComponente
-  const imagenPortada = 'https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg'
+  const imagenPortada = '../assets/imagenes/cards/avionRetraso.jpg'
   //segunda imagen de portada pero en disco duro local
   // const imagenPortada = './src/assets/imagenes/saliendoPortatil.png';
+  //solucion: puedes cargar la imagen como promp dentro del componente
+  //aun así necesito cargar la constante portada aqui...o eso parece
 
 
   //firebase materiales (objeto con los datos de las tarjetas)
