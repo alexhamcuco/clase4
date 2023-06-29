@@ -1,37 +1,14 @@
 import React, { useState } from 'react';
-import { getDocs, addDoc, collection, query, where, onSnapshot } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import db from '../../../DB/firebase-config';
-import { Button } from '@chakra-ui/react';
+import { Button, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react';
 
 function Formulario() {
-
-
-
 	const [nombreUsuario, setNombreUsuario] = useState('');
 	const [edadUsuario, setEdadUsuario] = useState('');
 	const [correoUsuario, setCorreoUsuario] = useState('');
 
 	const colRef = collection(db, 'usuarios');
-
-	// get collection data
-	getDocs(colRef)
-		.then((snapshot) => {
-			let usuarios = [];
-			snapshot.docs.forEach((doc) => {
-				usuarios.push({ ...doc.data(), id: doc.id });
-			});
-			//cada vez que añades letra salta el console.log(usuarios)
-			// console.log(usuarios);
-		})
-		.catch((err) => {
-			console.log(err.message);
-		});
-
-	//busqueda de una palabra en los materiales
-
-
-
-	//
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -40,7 +17,7 @@ function Formulario() {
 		console.log('Edad: ', edadUsuario);
 		console.log('Correo: ', correoUsuario);
 
-		// agregar nuevo usuario
+		// Agregar nuevo usuario
 		addDoc(colRef, {
 			nombre: nombreUsuario,
 			edad: edadUsuario,
@@ -51,7 +28,6 @@ function Formulario() {
 				setNombreUsuario('');
 				setEdadUsuario('');
 				setCorreoUsuario('');
-
 			})
 			.catch((error) => {
 				console.log('Error al agregar el usuario:', error);
@@ -59,40 +35,52 @@ function Formulario() {
 	};
 
 	return (
-		<div>
-			<form className='add' onSubmit={handleSubmit}>
-				<label htmlFor='nombreUsuario'>Nombre:</label>
-				<input
-					type='text'
-					id='nombreUsuario'
-					name='nombreUsuario'
-					required
-					value={nombreUsuario}
-					onChange={(event) => setNombreUsuario(event.target.value)}
-				/>
-				<br />
-				<label htmlFor='edadUsuario'>Edad:</label>
-				<input
-					type='text'
-					id='edadUsuario'
-					name='edadUsuario'
-					required
-					value={edadUsuario}
-					onChange={(event) => setEdadUsuario(event.target.value)}
-				/>
-				<br />
-				<label htmlFor='correoUsuario'>Correo:</label>
-				<input
-					type='text'
-					id='correoUsuario'
-					name='correoUsuario'
-					required
-					value={correoUsuario}
-					onChange={(event) => setCorreoUsuario(event.target.value)}
-				/>
-				<br />
-				<Button type='submit'>Nuevo usuario</Button>
-			</form>
+		<div style={{ display: 'flex', justifyContent: 'center' }}>
+			<div style={{ width: '33%', marginTop: '50px', marginBottom: '50px' }}>
+				<form className="add" onSubmit={handleSubmit}>
+					<VStack spacing={4} backgroundColor="gray.200" p={4} borderRadius="md">
+						<FormControl>
+							<FormLabel htmlFor="nombreUsuario">Nombre:</FormLabel>
+							<Input
+								type="text"
+								id="nombreUsuario"
+								name="nombreUsuario"
+								required
+								value={nombreUsuario}
+								onChange={(event) => setNombreUsuario(event.target.value)}
+								backgroundColor="white"
+							/>
+						</FormControl>
+						<FormControl>
+							<FormLabel htmlFor="edadUsuario">Edad:</FormLabel>
+							<Input
+								type="text"
+								id="edadUsuario"
+								name="edadUsuario"
+								required
+								value={edadUsuario}
+								onChange={(event) => setEdadUsuario(event.target.value)}
+								backgroundColor="white"
+							/>
+						</FormControl>
+						<FormControl>
+							<FormLabel htmlFor="correoUsuario">Correo:</FormLabel>
+							<Input
+								type="text"
+								id="correoUsuario"
+								name="correoUsuario"
+								required
+								value={correoUsuario}
+								onChange={(event) => setCorreoUsuario(event.target.value)}
+								backgroundColor="white"
+							/>
+						</FormControl>
+						<Button type="submit" backgroundColor="gray.500" color="white">
+							Nuevo usuario
+						</Button>
+					</VStack>
+				</form>
+			</div>
 		</div>
 	);
 }

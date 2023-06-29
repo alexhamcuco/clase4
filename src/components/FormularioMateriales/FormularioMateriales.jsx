@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { getDocs, addDoc, collection, query, where, onSnapshot } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import db from '../../../DB/firebase-config';
-import { Button, Input } from '@chakra-ui/react';
+import {
+    Button, Text,
+    Input, Box, FormControl, FormLabel, VStack, Flex
+} from '@chakra-ui/react';
 
 function Formulario() {
     const [nivelMaterial, setNivelMaterial] = useState('');
@@ -13,26 +16,6 @@ function Formulario() {
 
     const colRefMateriales = collection(db, 'materiales');
 
-    // get collection data
-    getDocs(colRefMateriales)
-        .then((snapshot) => {
-            let materiales = [];
-            snapshot.docs.forEach((doc) => {
-                materiales.push({ ...doc.data(), id: doc.id });
-            });
-            //cada vez que añades letra salta el console.log(usuarios)
-            // console.log(usuarios);
-        })
-        .catch((err) => {
-            console.log(err.message);
-        });
-
-    //busqueda de una palabra en los materiales
-
-
-
-    //
-
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -43,8 +26,7 @@ function Formulario() {
         console.log('Url Titulo Material: ', urlTituloMaterial);
         console.log('Fecha Material: ', fechaMaterial);
 
-
-        // agregar nuevo usuario
+        // Agregar nuevo material
         addDoc(colRefMateriales, {
             nivel: nivelMaterial,
             tipo: tipoMaterial,
@@ -54,10 +36,13 @@ function Formulario() {
             fecha: fechaMaterial,
         })
             .then(() => {
-                console.log('material agregado correctamente');
+                console.log('Material agregado correctamente');
                 setNivelMaterial('');
-
-
+                setTipoMaterial('');
+                setTituloMaterial('');
+                setUrlMaterial('');
+                setUrlTituloMaterial('');
+                setFechaMaterial('');
             })
             .catch((error) => {
                 console.log('Error al agregar el material:', error);
@@ -65,68 +50,122 @@ function Formulario() {
     };
 
     return (
+
         <div>
-            <form className='add' onSubmit={handleSubmit}>
-                <label htmlFor='nivelMaterial'>Nivel: </label>
-                <Input htmlSize={4} width='auto'
-                    type='text'
-                    id='nivelMaterial'
-                    name='nivelMaterial'
-                    required
-                    value={nivelMaterial}
-                    onChange={(event) => setNivelMaterial(event.target.value)}
-                />
-                <br />
+            <Text fontSize='xl' sx={{ color: 'green', marginTop: '20px' }}> SUBE UN NUEVO MATERIAL </Text>
 
-                <label htmlFor='tipoMaterial'>Tipo: </label>
-                <Input htmlSize={4} width='auto'
-                    type='text'
-                    id='tipoMaterial'
-                    name='tipoMaterial'
-                    required
-                    value={tipoMaterial}
-                    onChange={(event) => setTipoMaterial(event.target.value)}
-                />
-                <br />  <label htmlFor='tituloMaterial'>Titulo: </label>
-                <Input htmlSize={4} width='auto'
-                    type='text'
-                    id='tituloMaterial'
-                    name='tituloMaterial'
-                    required
-                    value={tituloMaterial}
-                    onChange={(event) => setTituloMaterial(event.target.value)}
-                />
-                <br />  <label htmlFor='urlMaterial'>Url: </label>
-                <Input htmlSize={4} width='auto'
-                    type='text'
-                    id='urlMaterial'
-                    name='urlMaterial'
-                    required
-                    value={urlMaterial}
-                    onChange={(event) => setUrlMaterial(event.target.value)}
-                />
-                <br />  <label htmlFor='urlTituloMaterial'> Url Titulo: </label>
-                <Input htmlSize={4} width='auto'
-                    type='text'
-                    id='urlTituloMaterial'
-                    name='urlTituloMaterial'
-                    required
-                    value={urlTituloMaterial}
-                    onChange={(event) => setUrlTituloMaterial(event.target.value)}
-                />
-                <br />  <label htmlFor='fechaMaterial'>Fecha: </label>
-                <Input htmlSize={4} width='auto'
-                    type='datetime-local'
-                    id='fechaMaterial'
-                    name='fechaMaterial'
-                    required
-                    value={fechaMaterial}
-                    onChange={(event) => setFechaMaterial(event.target.value)}
-                />
-                <br />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-                <Button type='submit'>Nuevo  Material</Button>
-            </form>
+                <Box w="50%" mt={10} mb={10} p={4} backgroundColor="gray.200" borderRadius="md">
+                    <form className="add" onSubmit={handleSubmit}>
+                        <VStack spacing={4}>
+                            <FormControl>
+                                <Flex align="center">
+                                    <FormLabel htmlFor="nivelMaterial" mr={2}>
+                                        Nivel:
+                                    </FormLabel>
+                                    <Input
+                                        type="text"
+                                        id="nivelMaterial"
+                                        name="nivelMaterial"
+                                        required
+                                        value={nivelMaterial}
+                                        onChange={(event) => setNivelMaterial(event.target.value)}
+                                        backgroundColor="white"
+
+                                    />
+                                </Flex>
+                            </FormControl>
+                            <FormControl>
+                                <Flex align="center">
+                                    <FormLabel htmlFor="tipoMaterial" mr={2}>
+                                        Tipo:
+                                    </FormLabel>
+                                    <Input
+                                        type="text"
+                                        id="tipoMaterial"
+                                        name="tipoMaterial"
+                                        required
+                                        value={tipoMaterial}
+                                        onChange={(event) => setTipoMaterial(event.target.value)}
+                                        backgroundColor="white"
+
+                                    />
+                                </Flex>
+                            </FormControl>
+                            <FormControl>
+                                <Flex align="center">
+                                    <FormLabel htmlFor="tituloMaterial" mr={2}>
+                                        Titulo:
+                                    </FormLabel>
+                                    <Input
+                                        type="text"
+                                        id="tituloMaterial"
+                                        name="tituloMaterial"
+                                        required
+                                        value={tituloMaterial}
+                                        onChange={(event) => setTituloMaterial(event.target.value)}
+                                        backgroundColor="white"
+
+                                    />
+                                </Flex>
+                            </FormControl>
+                            <FormControl>
+                                <Flex align="center">
+                                    <FormLabel htmlFor="urlMaterial" mr={2}>
+                                        Url:
+                                    </FormLabel>
+                                    <Input
+                                        type="text"
+                                        id="urlMaterial"
+                                        name="urlMaterial"
+                                        required
+                                        value={urlMaterial}
+                                        onChange={(event) => setUrlMaterial(event.target.value)}
+                                        backgroundColor="white"
+
+                                    />
+                                </Flex>
+                            </FormControl>
+                            <FormControl>
+                                <Flex align="center">
+                                    <FormLabel htmlFor="urlTituloMaterial" mr={2}>
+                                        Url Titulo:
+                                    </FormLabel>
+                                    <Input
+                                        type="text"
+                                        id="urlTituloMaterial"
+                                        name="urlTituloMaterial"
+                                        required
+                                        value={urlTituloMaterial}
+                                        onChange={(event) => setUrlTituloMaterial(event.target.value)}
+                                        backgroundColor="white"
+
+                                    />
+                                </Flex>
+                            </FormControl>
+                            <FormControl>
+                                <Flex align="center">
+                                    <FormLabel htmlFor="fechaMaterial" mr={2}>
+                                        Fecha:
+                                    </FormLabel>
+                                    <Input
+                                        type="datetime-local"
+                                        id="fechaMaterial"
+                                        name="fechaMaterial"
+                                        required
+                                        value={fechaMaterial}
+                                        onChange={(event) => setFechaMaterial(event.target.value)}
+                                        backgroundColor="white"
+
+                                    />
+                                </Flex>
+                            </FormControl>
+                            <Button type="submit">Nuevo Material</Button>
+                        </VStack>
+                    </form>
+                </Box>
+            </div>
         </div>
     );
 }

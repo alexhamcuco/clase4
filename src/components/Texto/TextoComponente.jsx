@@ -12,12 +12,12 @@ const TextoComponente = () => {
         <div>
 
 
-            <Text fontSize='xl' sx={{ color: 'green' }}> AÑADE TU NOMBRE, CORREO Y EDAD PARA SUSCRIBIRTE </Text>
+            <Text fontSize='xl' sx={{ color: 'green', marginTop: '20px' }}> SUSCRÍBETE AQUÍ </Text>
 
             <Formulario />
 
-            <Text fontSize='6x2' sx={{ color: 'red' }} > Spanish with alex </Text>
-            <Button leftIcon={<MdBuild />} colorScheme='red' size='lg'> Púlsame pero soy inutil </Button>
+            {/* <Text fontSize='6x2' sx={{ color: 'red' }} > Spanish with alex </Text>
+            <Button leftIcon={<MdBuild />} colorScheme='red' size='lg'> Púlsame pero soy inutil </Button> */}
 
 
         </div >

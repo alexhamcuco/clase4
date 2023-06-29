@@ -24,7 +24,6 @@ const CardDetalle = ({ materiales }) => {
         }
 
     }
-
     useEffect(() => {
         getMaterial()
 
