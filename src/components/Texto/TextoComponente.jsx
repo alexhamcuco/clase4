@@ -12,7 +12,7 @@ const TextoComponente = () => {
         <div>
 
 
-            <Text fontSize='xl' sx={{ color: 'green', marginTop: '20px' }}> SUSCRÍBETE AQUÍ </Text>
+            <Text fontSize='xl' sx={{ color: 'green', marginTop: '20px' }}> SUSCRÍBETE AQUÍ, OFERTAS Y NOVEDADES </Text>
 
             <Formulario />
 

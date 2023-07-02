@@ -3,6 +3,7 @@ import { Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import "./Navbar.css"
+import Toggle from "../Toggle/Toggle";
 
 const Navbar = ({ materiales }) => {
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
@@ -84,6 +85,9 @@ const Navbar = ({ materiales }) => {
                 >
                     FormularioMateriales
                 </ChakraLink>
+            </Box>
+            <Box>
+                <Toggle />
             </Box>
         </Flex>
     );

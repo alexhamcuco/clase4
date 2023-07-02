@@ -13,7 +13,7 @@ const ImagenPortadaComponente = () => {
     //para utilizar movimiento tuve que instalar otro paquete 
     //npm install framer-motion @chakra-ui/react
     //creo que hay conflictos porque ahora no hay color en el menu de materiales
-
+    //da lo mismo como meta la imagen, no se carga la primera vez k carga home
     return (
         <div>
             <Box m="auto">

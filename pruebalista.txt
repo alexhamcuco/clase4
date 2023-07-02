@@ -6,3 +6,5 @@ COSAS POR HACER
 -borrar y editar en la base de datos. 
 -loading de carga, un spinner (loading), cuando el componente se carga, 
 -modo noche
+-Thank you for subscribing! boton
+-copyright año automático
