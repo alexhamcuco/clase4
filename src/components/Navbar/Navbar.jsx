@@ -10,7 +10,7 @@ const Navbar = ({ materiales }) => {
 
 
     return (
-        <Flex bg="gray.800" p="4" align="center" justify="space-between">
+        <Flex bg="gray.700" p="4" align="center" mb="4" justify="space-between">
             <ChakraLink
                 as={ReactRouterLink}
                 to="/home"

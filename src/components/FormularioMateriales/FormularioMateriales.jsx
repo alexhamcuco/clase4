@@ -56,7 +56,7 @@ function Formulario() {
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-                <Box w="50%" mt={10} mb={10} p={4} backgroundColor="gray.200" borderRadius="md">
+                <Box w="50%" mt={10} mb={10} p={4} backgroundColor="gray.700" borderRadius="md">
                     <form className="add" onSubmit={handleSubmit}>
                         <VStack spacing={4}>
                             <FormControl>

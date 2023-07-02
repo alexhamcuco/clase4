@@ -7,6 +7,7 @@ function Formulario() {
 	const [nombreUsuario, setNombreUsuario] = useState('');
 	const [edadUsuario, setEdadUsuario] = useState('');
 	const [correoUsuario, setCorreoUsuario] = useState('');
+	const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
 	const colRef = collection(db, 'usuarios');
 
@@ -28,6 +29,8 @@ function Formulario() {
 				setNombreUsuario('');
 				setEdadUsuario('');
 				setCorreoUsuario('');
+				setMostrarMensaje(true);
+
 			})
 			.catch((error) => {
 				console.log('Error al agregar el usuario:', error);
@@ -38,7 +41,7 @@ function Formulario() {
 		<div style={{ display: 'flex', justifyContent: 'center' }}>
 			<div style={{ width: '33%', marginTop: '50px', marginBottom: '50px' }}>
 				<form className="add" onSubmit={handleSubmit}>
-					<VStack spacing={4} backgroundColor="gray.200" p={4} borderRadius="md">
+					<VStack spacing={4} backgroundColor="gray.700" p={4} borderRadius="md">
 						<FormControl>
 							<FormLabel htmlFor="nombreUsuario">Nombre:</FormLabel>
 							<Input
@@ -80,6 +83,12 @@ function Formulario() {
 						</Button>
 					</VStack>
 				</form>
+				{mostrarMensaje && (
+					<div style={{ backgroundColor: 'green', padding: '20px', marginTop: '20px', borderRadius: '5px' }}>
+						<h6>¡GRACIAS!</h6>
+
+					</div>
+				)}
 			</div>
 		</div>
 	);

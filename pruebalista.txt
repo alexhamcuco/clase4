@@ -4,6 +4,7 @@ COSAS POR HACER
 -Login usuario.
 -Metodo de Pago. 
 -loading de carga, un spinner (loading), cuando el componente se carga, 
--Thank you for subscribing! boton
 -borrar y editar en la base de datos. 
 
+-quitar opcion todos los materiales y agregarla a link materiales
+-problema meter datos en night mode, letras blancas
