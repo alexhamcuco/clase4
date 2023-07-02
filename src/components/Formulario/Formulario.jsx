@@ -79,7 +79,7 @@ function Formulario() {
 							/>
 						</FormControl>
 						<Button type="submit" backgroundColor="gray.500" color="white">
-							Nuevo usuario
+							Enviar
 						</Button>
 					</VStack>
 				</form>

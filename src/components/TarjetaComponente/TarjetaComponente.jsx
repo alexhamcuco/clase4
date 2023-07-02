@@ -24,8 +24,8 @@ const TarjetaComponente = ({ material }) => {
     return (
         <div>
 
-            <Card>
-                <CardBody>
+            <Card >
+                <CardBody className="tarjeta" padding={0}>
                     <Link to={tipo ? material.urlTitulo : `${material.tipo}/${material.urlTitulo}`}>
                         <img src={material.url} alt="" className="tarjeta-imagen"
                         />
