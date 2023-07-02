@@ -5,6 +5,7 @@ import React from "react";
 import { Button, Card, CardBody, CardFooter } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 import { Link, useLocation, useParams } from "react-router-dom";
+import "../TarjetaComponente/TarjetaComponente.css"; // Importa el archivo CSS
 
 
 const TarjetaComponente = ({ material }) => {
@@ -26,24 +27,33 @@ const TarjetaComponente = ({ material }) => {
             <Card>
                 <CardBody>
                     <Link to={tipo ? material.urlTitulo : `${material.tipo}/${material.urlTitulo}`}>
-                        <img src={material.url} alt="" />
+                        <img src={material.url} alt="" className="tarjeta-imagen"
+                        />
                     </Link>
                 </CardBody>
                 <CardFooter style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-                    {/* <Text> {material.titulo} </Text> */}
+                    <Text> {material.titulo} </Text>
 
                     {/* //esto es un condicional terniario en modo js  */}
 
                     {tipo ? <Link to={material.urlTitulo}>
 
-                        <Button colorScheme='red'> {material.tipo}
 
-                        </Button>
+                        {/* boton debajo de la tarjeta  */}
+
+                        {/* <Button colorScheme='red'> {material.tipo}
+
+                        </Button> */}
+
                     </Link> : <Link to={material.tipo + '/' + material.urlTitulo}>
-                        <Button colorScheme='red'> {material.tipo}
 
-                        </Button>
+                        {/* boton debajo de la tarjeta pero en la url todos los materiales  */}
+
+
+                        {/* <Button colorScheme='red'> {material.tipo}
+
+                        </Button> */}
                     </Link>
                     }
 
