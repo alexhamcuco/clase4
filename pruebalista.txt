@@ -3,8 +3,7 @@ COSAS POR HACER
 -Paginacion.
 -Login usuario.
 -Metodo de Pago. 
--borrar y editar en la base de datos. 
 -loading de carga, un spinner (loading), cuando el componente se carga, 
--modo noche
 -Thank you for subscribing! boton
--copyright año automático
+-borrar y editar en la base de datos. 
+

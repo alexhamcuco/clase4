@@ -25,21 +25,23 @@ const TarjetaComponente = ({ material }) => {
 
             <Card>
                 <CardBody>
-                    <img src={material.url} alt="" />
+                    <Link to={tipo ? material.urlTitulo : `${material.tipo}/${material.urlTitulo}`}>
+                        <img src={material.url} alt="" />
+                    </Link>
                 </CardBody>
-                <CardFooter>
+                <CardFooter style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-                    <Text> {material.titulo} </Text>
+                    {/* <Text> {material.titulo} </Text> */}
 
                     {/* //esto es un condicional terniario en modo js  */}
 
                     {tipo ? <Link to={material.urlTitulo}>
 
-                        <Button colorScheme='blue'> {material.tipo}
+                        <Button colorScheme='red'> {material.tipo}
 
                         </Button>
                     </Link> : <Link to={material.tipo + '/' + material.urlTitulo}>
-                        <Button colorScheme='blue'> {material.tipo}
+                        <Button colorScheme='red'> {material.tipo}
 
                         </Button>
                     </Link>
