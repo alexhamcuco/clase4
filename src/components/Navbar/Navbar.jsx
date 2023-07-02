@@ -4,6 +4,9 @@ import React from "react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import "./Navbar.css"
 import Toggle from "../Toggle/Toggle";
+import { Icon } from "@chakra-ui/react";
+import { FaHome } from "react-icons/fa";
+import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
 
 const Navbar = ({ materiales }) => {
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
@@ -11,6 +14,7 @@ const Navbar = ({ materiales }) => {
 
     return (
         <Flex bg="gray.700" p="4" align="center" mb="4" justify="space-between">
+
             <ChakraLink
                 as={ReactRouterLink}
                 to="/home"
@@ -18,7 +22,12 @@ const Navbar = ({ materiales }) => {
                 mr="4"
                 _hover={{ color: "red.500" }}
             >
-                <h2>HOME</h2>
+                <Flex align="center">
+                    <img src={logoIcon} alt="Logo" />
+                    {/* 
+                    <Icon as={FaHome} mr="2" />
+                    <h2>HOME</h2> */}
+                </Flex>
 
             </ChakraLink>
 

@@ -67,10 +67,12 @@ function App() {
           } />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
-          <Route path='/cards' element={<h1>putas cards</h1>} />
+          <Route path='/terminos-y-condiciones' element={<h1>putas condiciones</h1>} />
           <Route path='/suscripcion' element={<TextoComponente />} />
           <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
           <Route path='/materiales/:tipo/:titulo' element={<CardDetalle materiales={materiales} />} />
+          <Route path='/politica-de-privacidad' element={<h1>putas politica de privacidad</h1>} />
+          <Route path='/contacto' element={<h1>putas contacto</h1>} />
 
 
 
