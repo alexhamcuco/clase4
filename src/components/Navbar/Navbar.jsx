@@ -22,7 +22,7 @@ const Navbar = ({ materiales }) => {
                 mr="4"
                 _hover={{ color: "red.500" }}
             >
-                <Flex align="center">
+                <Flex className="logo-imagen" align="center">
                     <img src={logoIcon} alt="Logo" />
                     {/* 
                     <Icon as={FaHome} mr="2" />

@@ -1,15 +1,17 @@
 COSAS POR HACER
 
--Paginacion.
+-Paginacion.(de las de pasar pagina, asi puedo tener estructura de 9 tarjetas)
 -Login usuario.
 -movimiento logo home
+-buscador footer
 -Metodo de Pago. 
 -loading de carga, un spinner (loading), cuando el componente se carga, 
 -borrar y editar en la base de datos. 
 -responsivness
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
--redes sociales-> clientes (cursos, clases)
+-redes sociales->quitar twitter, añadir linkedin
+-al clikear condiciones -> ir arriba en pagina
 linkedin
 instagram
 facebook
