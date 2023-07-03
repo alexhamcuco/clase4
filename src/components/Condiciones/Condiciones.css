@@ -1,12 +1,8 @@
-h2 {
+h6 {
 	/* color: white; */
 	font-family: 'Roboto', sans-serif;
 }
 
-.navbartext {
-	/* color: white; */
-	font-family: 'Roboto', sans-serif;
-}
 .logo-imagen {
 	transition: filter 0.1s ease-in-out;
 }

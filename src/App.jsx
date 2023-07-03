@@ -50,7 +50,7 @@ function App() {
     getMateriales()
 
   }, []);
-  // console.log(materiales)
+  console.log(materiales)
 
   return (
     <>

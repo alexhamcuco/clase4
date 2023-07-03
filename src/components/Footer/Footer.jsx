@@ -4,12 +4,14 @@ import { MdAddIcCall, MdFoodBank } from "react-icons/md";
 import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
 import { Link as ReactRouterLink } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
-
+import "./Footer.css"
 
 const Footer = () => {
     return (
         <Box bg="gray.700" color="white" py="4" px="6" mt="4">
-            <img src={logoIcon} alt="Logo" />
+            <img className="logo-imagen" src={logoIcon} alt="Logo"
+                onClick={() => scrollToTop()}
+            />
 
             <Flex justify="space-between" alignItems="center">
 
@@ -144,7 +146,7 @@ const Column = ({ title, children }) => {
 
 const scrollToTop = () => {
     window.scrollTo({
-        top: 0,
+        top: 2,
         behavior: "smooth"
     });
 };

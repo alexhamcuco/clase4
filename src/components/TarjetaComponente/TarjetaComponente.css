@@ -1,3 +1,7 @@
+.titulomaterial {
+	font-family: 'Roboto', sans-serif;
+}
+
 .tarjeta-imagen {
 	transition: filter 0.3s ease-in-out;
 }

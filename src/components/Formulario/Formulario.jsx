@@ -85,7 +85,7 @@ function Formulario() {
 				</form>
 				{mostrarMensaje && (
 					<div style={{ backgroundColor: 'green', padding: '20px', marginTop: '20px', borderRadius: '5px' }}>
-						<h6>¡GRACIAS!</h6>
+						<h6>SUSCRÍTO ¡GRACIAS!</h6>
 
 					</div>
 				)}

@@ -31,7 +31,7 @@ const Navbar = ({ materiales }) => {
 
             </ChakraLink>
 
-            <Box>
+            <Box className="navbartext">
 
 
 

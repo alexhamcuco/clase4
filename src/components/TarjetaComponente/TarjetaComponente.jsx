@@ -33,7 +33,7 @@ const TarjetaComponente = ({ material }) => {
                 </CardBody>
                 <CardFooter style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-                    <Text> {material.titulo} </Text>
+                    <Text className="titulomaterial"> {material.titulo} </Text>
 
                     {/* //esto es un condicional terniario en modo js  */}
 
