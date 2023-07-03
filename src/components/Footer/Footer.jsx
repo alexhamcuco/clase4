@@ -70,6 +70,15 @@ const Footer = () => {
                             Privacidad
                         </ChakraLink>
                         {/* <CustomLink href="/politica-de-privacidad">Privacidad</CustomLink> */}
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to="/cookies"
+                            color="white"
+                            mr="4"
+                            _hover={{ color: "red.500" }}
+                        >
+                            Cookies
+                        </ChakraLink>
                     </Column>
                     <Column title="Contacto">
                         <ChakraLink
@@ -82,6 +91,15 @@ const Footer = () => {
                             Contacto
                         </ChakraLink>
                         {/* <CustomLink href="/contacto">About</CustomLink> */}
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to="/alejandro-rodriguez"
+                            color="white"
+                            mr="4"
+                            _hover={{ color: "red.500" }}
+                        >
+                            About me
+                        </ChakraLink>
                     </Column>
                 </Flex>
             </Flex>
