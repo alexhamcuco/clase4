@@ -14,7 +14,9 @@ import CardDetalle from './components/CardDetalle/CardDetalle'
 import ImagenPortadaComponente from './components/ImagenPortadaComponente/ImagenPortadaComponente'
 import Footer from './components/Footer/Footer'
 import Testimonials from './components/Testimonials/Testimonials'
-
+import Condiciones from './components/Condiciones/Condiciones'
+import Privacidad from './components/Privacidad/Privacidad'
+import Contacto from './components/Contacto/Contacto'
 //vite es el nuevo webpack, es un compilador de procesos. 
 //Vite preagrupa las dependencias de React
 
@@ -67,12 +69,13 @@ function App() {
           } />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
-          <Route path='/terminos-y-condiciones' element={<h1>putas condiciones</h1>} />
           <Route path='/suscripcion' element={<TextoComponente />} />
-          <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
+          <Route path='//terminos-y-condiciones' element={<Condiciones />} />
           <Route path='/materiales/:tipo/:titulo' element={<CardDetalle materiales={materiales} />} />
-          <Route path='/politica-de-privacidad' element={<h1>putas politica de privacidad</h1>} />
-          <Route path='/contacto' element={<h1>putas contacto</h1>} />
+          <Route path='/politica-de-privacidad' element={<Privacidad />} />
+          <Route path='/contacto' element={< Contacto />} />
+          <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
+
 
 
 

@@ -2,10 +2,11 @@ COSAS POR HACER
 
 -Paginacion.
 -Login usuario.
+-movimiento logo home
 -Metodo de Pago. 
 -loading de carga, un spinner (loading), cuando el componente se carga, 
 -borrar y editar en la base de datos. 
-
+-responsivness
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
 -redes sociales-> clientes (cursos, clases)

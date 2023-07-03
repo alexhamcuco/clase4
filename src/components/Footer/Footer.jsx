@@ -2,6 +2,9 @@ import { Icon, Box, Flex, Text, Link } from "@chakra-ui/react";
 import { Fa500Px, FaAccessibleIcon, FaBezierCurve, FaThermometer } from "react-icons/fa";
 import { MdAddIcCall, MdFoodBank } from "react-icons/md";
 import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
+
 
 const Footer = () => {
     return (
@@ -47,11 +50,38 @@ const Footer = () => {
                         </CustomLink>
                     </Column>
                     <Column title="Condiciones Legales">
-                        <CustomLink href="/terminos-y-condiciones">Condiciones</CustomLink>
-                        <CustomLink href="/politica-de-privacidad">Privacidad</CustomLink>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to="/terminos-y-condiciones"
+                            color="white"
+                            mr="4"
+                            _hover={{ color: "red.500" }}
+                        >
+                            Condiciones
+                        </ChakraLink>
+                        {/* <CustomLink href="/terminos-y-condiciones">Condiciones</CustomLink> */}
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to="/politica-de-privacidad"
+                            color="white"
+                            mr="4"
+                            _hover={{ color: "red.500" }}
+                        >
+                            Privacidad
+                        </ChakraLink>
+                        {/* <CustomLink href="/politica-de-privacidad">Privacidad</CustomLink> */}
                     </Column>
                     <Column title="Contacto">
-                        <CustomLink href="/contacto">About</CustomLink>
+                        <ChakraLink
+                            as={ReactRouterLink}
+                            to="/contacto"
+                            color="white"
+                            mr="4"
+                            _hover={{ color: "red.500" }}
+                        >
+                            Contacto
+                        </ChakraLink>
+                        {/* <CustomLink href="/contacto">About</CustomLink> */}
                     </Column>
                 </Flex>
             </Flex>

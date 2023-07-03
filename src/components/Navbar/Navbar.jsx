@@ -6,7 +6,7 @@ import "./Navbar.css"
 import Toggle from "../Toggle/Toggle";
 import { Icon } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
-import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
+import logoIcon from '../../assets/imagenes/favicon/logopng_opx_icon.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
 
 const Navbar = ({ materiales }) => {
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
