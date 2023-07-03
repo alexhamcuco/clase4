@@ -7,7 +7,7 @@ import { Text, Heading } from '@chakra-ui/react'
 
 const Condiciones = () => {
     return (
-        <div>
+        <div >
 
 
             <Heading as="h2" fontSize="xl" sx={{ color: 'green', marginTop: '40px', fontWeight: 'bold' }}>

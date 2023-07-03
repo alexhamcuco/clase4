@@ -75,7 +75,7 @@ function App() {
           <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
 
 
-          <Route path='//terminos-y-condiciones' element={<Condiciones />} />
+          <Route path='/terminos-y-condiciones' element={<Condiciones />} />
           <Route path='/politica-de-privacidad' element={<Privacidad />} />
           <Route path='/contacto' element={< Contacto />} />
           <Route path='/cookies' element={< Cookies />} />

@@ -11,7 +11,6 @@ COSAS POR HACER
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
 -redes sociales->quitar twitter, añadir linkedin
--al clikear condiciones -> ir arriba en pagina
 linkedin
 instagram
 facebook

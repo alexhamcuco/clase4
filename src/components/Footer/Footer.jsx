@@ -56,6 +56,7 @@ const Footer = () => {
                             color="white"
                             mr="4"
                             _hover={{ color: "red.500" }}
+                            onClick={() => scrollToTop()}
                         >
                             Condiciones
                         </ChakraLink>
@@ -66,6 +67,8 @@ const Footer = () => {
                             color="white"
                             mr="4"
                             _hover={{ color: "red.500" }}
+                            onClick={() => scrollToTop()}
+
                         >
                             Privacidad
                         </ChakraLink>
@@ -76,6 +79,8 @@ const Footer = () => {
                             color="white"
                             mr="4"
                             _hover={{ color: "red.500" }}
+                            onClick={() => scrollToTop()}
+
                         >
                             Cookies
                         </ChakraLink>
@@ -87,6 +92,8 @@ const Footer = () => {
                             color="white"
                             mr="4"
                             _hover={{ color: "red.500" }}
+                            onClick={() => scrollToTop()}
+
                         >
                             Contacto
                         </ChakraLink>
@@ -97,6 +104,8 @@ const Footer = () => {
                             color="white"
                             mr="4"
                             _hover={{ color: "red.500" }}
+                            onClick={() => scrollToTop()}
+
                         >
                             About me
                         </ChakraLink>
@@ -131,6 +140,13 @@ const Column = ({ title, children }) => {
             <Flex direction="column">{children}</Flex>
         </Box>
     );
+};
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 };
 
 export default Footer;
