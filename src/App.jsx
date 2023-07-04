@@ -19,6 +19,7 @@ import Privacidad from './components/Privacidad/Privacidad'
 import Contacto from './components/Contacto/Contacto'
 import Cookies from './components/Cookies/Cookies'//vite es el nuevo webpack, es un compilador de procesos. 
 import About from './components/About/About'
+import Video from './components/Video/Video'
 //Vite preagrupa las dependencias de React
 
 function App() {
@@ -70,13 +71,13 @@ function App() {
           } />
           <Route path='/materiales' element={<Datos materiales={materiales} />} />
           <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
-          <Route path='/suscripcion' element={<TextoComponente />} />
           <Route path='/materiales/:tipo/:titulo' element={<CardDetalle materiales={materiales} />} />
+          <Route path='/suscripcion' element={<TextoComponente />} />
           <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
 
 
           <Route path='/terminos-y-condiciones' element={<Condiciones />} />
-          <Route path='/politica-de-privacidad' element={<Privacidad />} />
+          <Route path='/politica-de-privacidad' element={<Video />} />
           <Route path='/contacto' element={< Contacto />} />
           <Route path='/cookies' element={< Cookies />} />
           <Route path='/alejandro-rodriguez' element={< About />} />

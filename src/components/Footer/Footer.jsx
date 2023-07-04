@@ -146,7 +146,7 @@ const Column = ({ title, children }) => {
 
 const scrollToTop = () => {
     window.scrollTo({
-        top: 2,
+        top: 1,
         behavior: "smooth"
     });
 };

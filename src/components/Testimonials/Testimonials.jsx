@@ -3,18 +3,18 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 const Testimonials = () => {
     const testimonialsData = [
         {
-            name: "Ben",
-            opinion: "¡Excelente experiencia con Spanish with Alex!",
+            name: "Ben, Los Angeles",
+            opinion: "He knows precisely how to cater to your level  and creates the scenarios to let you talk intuitively as opposed to just learn the words/verbs and recite them without relevance in your life. ",
             image: "https://www.spanishwithalex.com/images/T060221460_Avatar.jpg",
         },
         {
-            name: "Mike",
-            opinion: "Recomiendo totalmente este servicio. Me ha ayudado mucho.",
+            name: "Mike, Sydney",
+            opinion: "Alex is a wonderful teacher. He is very skilled at making the conversations that flow naturally, while also making sure to pause several times during the lesson to identify errors and talk about how to correct them. It's the perfect mix of fixing my mistakes while also having a fun conversation. His demeanor and style make it easy for the conversation to flow and builds up my confidence in speaking. Highly recommended!",
             image: "https://www.spanishwithalex.com/images/2T071007130_Avatar.jpg",
         },
         {
-            name: "Sam",
-            opinion: "Las clases son divertidas y muy efectivas. ¡Gracias!",
+            name: "Sam, New York",
+            opinion: "Alejandro kept the flow going at all times and made learning really fun and engaging. He’s humble and genuine even as a beginner, it just doesn’t feel like I’m being patronised by a teacher rather a friend who’s willing to share his language with me.",
             image: "https://www.spanishwithalex.com/images/T071363650_Avatar.jpg",
         },
     ];

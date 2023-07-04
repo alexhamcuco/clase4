@@ -1,5 +1,7 @@
 COSAS POR HACER
-
+-integrar ia.https://creatomate.com/blog/using-chatgpt-api-to-auto-create-social-media-videos-by-code
+-toogle idioma
+-boton volver arriba/regresar pagina/contenido pagina
 -Paginacion.(de las de pasar pagina, asi puedo tener estructura de 9 tarjetas)
 -Login usuario.
 -movimiento logo home
@@ -11,6 +13,8 @@ COSAS POR HACER
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
 -redes sociales->quitar twitter, añadir linkedin
+-toogle idioma
+
 linkedin
 instagram
 facebook
