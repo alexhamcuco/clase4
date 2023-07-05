@@ -20,9 +20,28 @@ import Contacto from './components/Contacto/Contacto'
 import Cookies from './components/Cookies/Cookies'//vite es el nuevo webpack, es un compilador de procesos. 
 import About from './components/About/About'
 import Video from './components/Video/Video'
+import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator'
 //Vite preagrupa las dependencias de React
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Función para manejar el evento de carga completa de la página
+    const handleLoad = () => {
+      setLoading(false); // Actualiza el estado para indicar que la carga ha finalizado
+    };
+
+    // Agrega un event listener para el evento de carga completa de la ventana
+    window.addEventListener('load', handleLoad);
+
+    // Limpia el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
 
   //cargar la imagen de la portada del componente ImagenPortadaComponente
   const imagenPortada = '../assets/imagenes/cards/avionRetraso.jpg'
@@ -55,41 +74,50 @@ function App() {
 
   return (
     <>
-
       <div>
 
-        <Navbar materiales={materiales} />
+        {loading ? (
+          <LoadingIndicator /> // Muestra el indicador de carga mientras loading sea true
+        ) : (
+          <>
 
 
-        <Routes>
-
-          <Route path="/home" element={
-            <>
-              <ImagenPortadaComponente imagenPortada={imagenPortada} />
-              <Testimonials />
-            </>
-          } />
-          <Route path='/materiales' element={<Datos materiales={materiales} />} />
-          <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
-          <Route path='/materiales/:tipo/:titulo' element={<CardDetalle materiales={materiales} />} />
-          <Route path='/suscripcion' element={<TextoComponente />} />
-          <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
+            <Navbar materiales={materiales} />
 
 
-          <Route path='/terminos-y-condiciones' element={<Condiciones />} />
-          <Route path='/politica-de-privacidad' element={<Video />} />
-          <Route path='/contacto' element={< Contacto />} />
-          <Route path='/cookies' element={< Cookies />} />
-          <Route path='/alejandro-rodriguez' element={< About />} />
+            <Routes>
+
+              <Route path="/home" element={
+                <>
+                  <ImagenPortadaComponente imagenPortada={imagenPortada} />
+                  <Testimonials />
+                </>
+              } />
+              <Route path='/materiales' element={<Datos materiales={materiales} />} />
+              <Route path='/materiales/:tipo' element={<Datos materiales={materiales} />} />
+              <Route path='/materiales/:tipo/:titulo' element={<CardDetalle materiales={materiales} />} />
+              <Route path='/suscripcion' element={<TextoComponente />} />
+              <Route path='/FormularioMateriales' element={<FormularioMateriales />} />
+
+
+              <Route path='/terminos-y-condiciones' element={<Condiciones />} />
+              <Route path='/politica-de-privacidad' element={<Video />} />
+              <Route path='/contacto' element={< Contacto />} />
+              <Route path='/cookies' element={< Cookies />} />
+              <Route path='/alejandro-rodriguez' element={< About />} />
 
 
 
 
 
 
-        </Routes>
+            </Routes>
 
-        <Footer />
+            <Footer />
+
+          </> //parte final d para el indicador de loading
+        )}//parte final d para el indicador de loading
+
       </div >
 
     </>
