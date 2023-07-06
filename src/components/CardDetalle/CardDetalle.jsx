@@ -5,6 +5,7 @@ import { Card, CardBody, Text, CardFooter, Button } from '@chakra-ui/react'
 import { Link, useParams } from 'react-router-dom'
 import { collection, limit, query, where, getDocs } from "firebase/firestore";
 import db from "../../../DB/firebase-config"
+import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 
 
 
@@ -12,6 +13,7 @@ import db from "../../../DB/firebase-config"
 const CardDetalle = ({ materiales }) => {
     const { titulo } = useParams()
     const [material, setMaterial] = useState({})    // const material = materiales.find(material => material.urlTitulo === titulo)
+    const [loading, setLoading] = useState(true);
 
     const getMaterial = async () => {
         const q = query(
@@ -23,14 +25,21 @@ const CardDetalle = ({ materiales }) => {
             if (querySnapshot.empty) {
                 console.log("No hay resultados");
             }
+
+
             setMaterial(querySnapshot.docs.map((doc) => doc.data())[0]);
+            setLoading(false)
+
         });
     };
     useEffect(() => {
         getMaterial()
 
     }, [])
+    if (loading) {
+        return <LoadingIndicator />
 
+    }
 
     return (
 

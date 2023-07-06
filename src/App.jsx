@@ -27,20 +27,20 @@ function App() {
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Función para manejar el evento de carga completa de la página
-    const handleLoad = () => {
-      setLoading(false); // Actualiza el estado para indicar que la carga ha finalizado
-    };
+  // useEffect(() => {
+  //   // Función para manejar el evento de carga completa de la página
+  //   const handleLoad = () => {
+  //     setLoading(false); // Actualiza el estado para indicar que la carga ha finalizado
+  //   };
 
-    // Agrega un event listener para el evento de carga completa de la ventana
-    window.addEventListener('load', handleLoad);
+  //   // Agrega un event listener para el evento de carga completa de la ventana
+  //   window.addEventListener('load', handleLoad);
 
-    // Limpia el event listener cuando el componente se desmonta
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
+  //   // Limpia el event listener cuando el componente se desmonta
+  //   return () => {
+  //     window.removeEventListener('load', handleLoad);
+  //   };
+  // }, []);
 
 
   //cargar la imagen de la portada del componente ImagenPortadaComponente
@@ -63,7 +63,7 @@ function App() {
     }))
     // console.log(materiales)
     setMateriales(materiales)
-
+    setLoading(false)
   }
 
   useEffect(() => {
