@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Text } from '@chakra-ui/react'
 import Navbar from './components/Navbar/Navbar.jsx'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { MdBuild, MdCall } from "react-icons/md"
 import db from "../DB/firebase-config"
@@ -81,7 +81,6 @@ function App() {
         ) : (
           <>
 
-
             <Navbar materiales={materiales} />
 
 
@@ -106,6 +105,10 @@ function App() {
               <Route path='/cookies' element={< Cookies />} />
               <Route path='/alejandro-rodriguez' element={< About />} />
 
+              <Route path='/retrasos-aviones' element={< About />} />
+
+              <Route path='*' element={<Navigate to='/home' />} />
+
 
 
 
@@ -115,8 +118,8 @@ function App() {
 
             <Footer />
 
-          </> //parte final d para el indicador de loading
-        )}//parte final d para el indicador de loading
+          </> //parte final d para el indicador de loading, la linea siguiente tambien
+        )}
 
       </div >
 

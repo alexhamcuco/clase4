@@ -1,20 +1,21 @@
 COSAS POR HACER
--integrar ia.https://creatomate.com/blog/using-chatgpt-api-to-auto-create-social-media-videos-by-code
--toogle idioma
--boton volver arriba/regresar pagina/contenido pagina
--Paginacion.(de las de pasar pagina, asi puedo tener estructura de 9 tarjetas)
 -Login usuario.
--movimiento logo home
--buscador footer
+-toogle idioma
 -Metodo de Pago. 
--loading de carga, un spinner (loading), cuando el componente se carga, 
+
+
+
+-integrar ia.https://creatomate.com/blog/using-chatgpt-api-to-auto-create-social-media-videos-by-code
+-Paginacion.(de las de pasar pagina, asi puedo tener estructura de 9 tarjetas, pasar paginas laterales, para ipad)
+-buscador footer
 -borrar y editar en la base de datos. 
 -responsivness
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
 -redes sociales->quitar twitter, añadir linkedin
 -toogle idioma
-
+-cuando pasas por encima de las tarjetas sería interesnte ver un pequeño resumen de la actividad y el tiempo estimado.
+-escribir en minusculas todo lo de la url en la base de datos, y luego transformar la primera letra de los materiales.
 linkedin
 instagram
 facebook

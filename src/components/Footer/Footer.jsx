@@ -8,7 +8,7 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <Box bg="gray.700" color="white" py="4" px="6" mt="4">
+        <Box bg="gray.700" color="white" py="4" px="4" mt="2">
             <img className="logo-imagen" src={logoIcon} alt="Logo"
                 onClick={() => scrollToTop()}
             />
