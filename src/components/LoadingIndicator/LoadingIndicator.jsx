@@ -4,11 +4,11 @@ import { Spinner } from '@chakra-ui/react';
 const LoadingIndicator = () => {
     return (
         <Spinner
-            thickness="4px"
-            speed="0.65s"
-            emptyColor="gray.200"
-            color="blue.500"
-            size="xl"
+            thickness='9px'
+            speed='0.35s'
+            emptyColor='gray.100'
+            color='red.500'
+            size='xl'
         />
     );
 };

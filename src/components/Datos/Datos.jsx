@@ -9,6 +9,7 @@ import TarjetaComponente from "../TarjetaComponente/TarjetaComponente";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useInstantLayoutTransition } from "framer-motion";
 import { useParams } from "react-router-dom";
+
 const Datos = ({ materiales }) => {
 
     const { tipo } = useParams() //este tipo está viculado al path itinerado?
@@ -21,7 +22,7 @@ const Datos = ({ materiales }) => {
         materialesFiltrados = materiales.filter((material) => material.tipo === tipo)
     }
     return (
-        < Grid templateColumns='repeat(3, 1fr)' gap={6} >
+        < Grid templateColumns='repeat(3, 1fr)' gap={6}  >
             {
                 materialesFiltrados.map((material) => <TarjetaComponente material={material} key={material.id} />)
             }
