@@ -6,7 +6,7 @@ const LoadingIndicator = () => {
         <Spinner
             thickness='9px'
             speed='0.35s'
-            emptyColor='gray.100'
+            emptyColor='white'
             color='red.500'
             size='xl'
         />
