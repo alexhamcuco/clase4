@@ -5,7 +5,7 @@ import { Button, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react'
 
 function Formulario() {
 	const [nombreUsuario, setNombreUsuario] = useState('');
-	const [edadUsuario, setEdadUsuario] = useState('');
+	// const [edadUsuario, setEdadUsuario] = useState('');
 	const [correoUsuario, setCorreoUsuario] = useState('');
 	const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
@@ -15,19 +15,19 @@ function Formulario() {
 		event.preventDefault();
 
 		console.log('Nombre: ', nombreUsuario);
-		console.log('Edad: ', edadUsuario);
+		// console.log('Edad: ', edadUsuario);
 		console.log('Correo: ', correoUsuario);
 
 		// Agregar nuevo usuario
 		addDoc(colRef, {
 			nombre: nombreUsuario,
-			edad: edadUsuario,
+			// edad: edadUsuario,
 			correo: correoUsuario,
 		})
 			.then(() => {
 				console.log('Usuario agregado correctamente');
 				setNombreUsuario('');
-				setEdadUsuario('');
+				// setEdadUsuario('');
 				setCorreoUsuario('');
 				setMostrarMensaje(true);
 
@@ -54,7 +54,7 @@ function Formulario() {
 								backgroundColor="white"
 							/>
 						</FormControl>
-						<FormControl>
+						{/* <FormControl>
 							<FormLabel htmlFor="edadUsuario">Edad:</FormLabel>
 							<Input
 								type="text"
@@ -65,7 +65,7 @@ function Formulario() {
 								onChange={(event) => setEdadUsuario(event.target.value)}
 								backgroundColor="white"
 							/>
-						</FormControl>
+						</FormControl> */}
 						<FormControl>
 							<FormLabel htmlFor="correoUsuario">Correo:</FormLabel>
 							<Input

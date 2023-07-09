@@ -1,3 +1,13 @@
+.logo-imagen img {
+	transform: scale(0.75);
+}
+
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
 h2 {
 	/* color: white; */
 	font-family: 'Roboto', sans-serif;
@@ -6,6 +16,7 @@ h2 {
 .navbartext {
 	/* color: white; */
 	font-family: 'Roboto', sans-serif;
+	padding: 0.5rem; /* Ajusta el valor del padding según tus necesidades */
 }
 .logo-imagen {
 	transition: filter 0.1s ease-in-out;

@@ -21,6 +21,10 @@ import Cookies from './components/Cookies/Cookies'//vite es el nuevo webpack, es
 import About from './components/About/About'
 import Video from './components/Video/Video'
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator'
+import PriceTable from './components/PriceTable/PriceTable'
+import ReservaFacil from './components/ReservaFacil/ReservaFacil'
+import ComponenteSeparador from './components/Separador/ComponenteSeparador'
+import RetrasosAviones from './components/RetrasosAvionesA1/RetrasosAviones'
 //Vite preagrupa las dependencias de React
 
 function App() {
@@ -89,7 +93,20 @@ function App() {
               <Route path="/home" element={
                 <>
                   <ImagenPortadaComponente imagenPortada={imagenPortada} />
+                  <ComponenteSeparador />
                   <Testimonials />
+                  <ComponenteSeparador />
+
+                  <PriceTable />
+                  <ComponenteSeparador />
+
+
+                  <ReservaFacil />
+                  <ComponenteSeparador />
+
+                  <Video />
+                  <ComponenteSeparador />
+
                 </>
               } />
               <Route path='/materiales' element={<Datos materiales={materiales} />} />
@@ -100,12 +117,16 @@ function App() {
 
 
               <Route path='/terminos-y-condiciones' element={<Condiciones />} />
-              <Route path='/politica-de-privacidad' element={<Video />} />
+              <Route path='/politica-de-privacidad' element={<Privacidad />} />
               <Route path='/contacto' element={< Contacto />} />
               <Route path='/cookies' element={< Cookies />} />
               <Route path='/alejandro-rodriguez' element={< About />} />
 
-              <Route path='/retrasos-aviones' element={< About />} />
+              <Route path='materiales/videos/retrasos-aviones' element={< RetrasosAviones />} />
+              <Route path='materiales/videos/retrasos-aviones' element={< RetrasosAviones />} />
+              <Route path='materiales/videos/un-dia-en-la-playa-A1' element={< RetrasosAviones />} />
+              <Route path='materiales/Ejercicios/verde-que-te-quiero' element={< RetrasosAviones />} />
+              <Route path='materiales/videos/retrasos-aviones' element={< RetrasosAviones />} />
 
               <Route path='*' element={<Navigate to='/home' />} />
 

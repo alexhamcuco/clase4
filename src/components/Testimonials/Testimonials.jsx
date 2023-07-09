@@ -2,6 +2,8 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 
 const Testimonials = () => {
     const testimonialsData = [
+
+
         {
             name: "Ben, Los Angeles",
             opinion: "He knows precisely how to cater to your level  and creates the scenarios to let you talk intuitively as opposed to just learn the words/verbs and recite them without relevance in your life. ",
@@ -20,7 +22,19 @@ const Testimonials = () => {
     ];
 
     return (
+
+
+
+
         <Box mt="6" mb="12">
+            <Text
+                bgGradient='linear(to-l, #7928CA, #FF0033)'
+                bgClip='text'
+                fontSize='6xl'
+                fontWeight='extrabold'
+            >
+                And some testimonials!
+            </Text>
             <Flex justify="center" align="center">
                 {testimonialsData.map((testimonial, index) => (
                     <Testimonial key={index} {...testimonial} />
@@ -33,10 +47,10 @@ const Testimonials = () => {
 const Testimonial = ({ name, opinion, image }) => {
     return (
         <Box textAlign="center" mx="4">
-            <Box bg="gray.200" borderRadius="full" width="80px" height="80px" mb="2" mx="auto">
+            <Box bg="gray.500" borderRadius="full" width="80px" height="80px" mb="2" mx="auto">
                 <img src={image} alt={name} style={{ borderRadius: "50%", width: "100%", height: "100%" }} />
             </Box>
-            <Box bg="gray.800" color="white" borderRadius="lg" p="4" position="relative">
+            <Box bg="gray.500" color="white" borderRadius="lg" p="4" position="relative">
                 <Text fontSize="sm" fontStyle="italic" mb="2">{opinion}</Text>
                 <Text fontWeight="bold">{name}</Text>
 

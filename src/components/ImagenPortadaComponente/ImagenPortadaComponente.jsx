@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import imagenPortada from '../../assets/imagenes/cards/avionRetraso.jpg'
 
@@ -17,28 +17,39 @@ const ImagenPortadaComponente = () => {
     return (
         <div>
             <Box m="auto">
+
                 <motion.div
                     initial={{ y: 22 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <img src={imagenPortada} alt="Imagen principal" />
+                    <Link href="/materiales/Videos/retrasos-aviones">
+
+                        <img src={imagenPortada} alt="Imagen principal" />
+                    </Link>
+
                 </motion.div>
             </Box>
 
-            <Text
-                bgGradient='linear(to-l, #7928CA, #FF0033)'
-                bgClip='text'
-                fontSize='6xl'
-                fontWeight='extrabold'
-            >
-                Check out our latest video.
-            </Text>
+            <Link href="/materiales/Videos/retrasos-aviones">
+
+                <Text
+                    bgGradient='linear(to-l, #7928CA, #FF0033)'
+                    bgClip='text'
+                    fontSize='6xl'
+                    fontWeight='extrabold'
+                >
+                    Check out our latest video.
+                </Text>
+            </Link>
+
+
         </div>
     );
 };
 
 export default ImagenPortadaComponente;
+
 
 
 
