@@ -3,13 +3,15 @@ import { Box } from '@chakra-ui/react';
 const Video = () => {
     return (
         <Box textAlign="center">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/8MhdV1nxa_8"
-                allowFullScreen
-                title="Buscar Compañero de piso"
-            ></iframe>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <iframe
+                    width="800"
+                    height="450"
+                    src="https://www.youtube.com/embed/8MhdV1nxa_8"
+                    allowFullScreen
+                    title="Buscar Compañero de piso"
+                ></iframe>
+            </div>
         </Box>
     );
 };

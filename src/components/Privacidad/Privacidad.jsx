@@ -37,13 +37,13 @@ const Privacidad = () => {
                 Seguridad de la información
             </Heading>
 
-            <Text fontSize="xl" as="h6" mt={4} sx={{ textAlign: 'justify', marginLeft: '200px', marginRight: '200px', mt: '40px', mb: '60px', }}>
+            <Text fontSize="xl" as="h6" mt={4} sx={{ textAlign: 'left', marginLeft: '200px', marginRight: '200px', mt: '40px', mb: '60px', }}>
                 Tomamos las medidas necesarias para proteger la información personal que recopilamos. Sin embargo, ten en cuenta que ninguna medida de seguridad es absoluta y no podemos garantizar la seguridad completa de tus datos. Te recomendamos tomar precauciones adicionales al compartir información personal en línea.
             </Text>
 
             {/* Otros puntos de la política de privacidad */}
 
-        </div>
+        </div >
 
     )
 }

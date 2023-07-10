@@ -18,7 +18,7 @@ const Footer = () => {
                 <Text fontSize="sm">© 2023 Spanish with Alex.</Text>
                 <Flex>
 
-                    <Column title="Redes Sociales">
+                    <Column title="Follow">
                         <CustomLink
                             href="https://www.youtube.com/@spanishwithalex"
                             target="_blank"
