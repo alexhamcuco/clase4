@@ -4,14 +4,25 @@ import { MdAddIcCall, MdFoodBank } from "react-icons/md";
 import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
 import { Link as ReactRouterLink } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
+import { FaArrowLeft } from "react-icons/fa";
+
 import "./Footer.css"
+
+const goBack = () => {
+    window.history.back();
+};
+
 
 const Footer = () => {
     return (
         <Box bg="gray.700" color="white" py="4" px="4" mt="2">
+            <Icon as={FaArrowLeft} boxSize={6} cursor="pointer" onClick={() => goBack()} />
+
             <img className="logo-imagen" src={logoIcon} alt="Logo"
                 onClick={() => scrollToTop()}
             />
+
+
 
             <Flex justify="space-between" alignItems="center">
 

@@ -4,11 +4,14 @@ COSAS POR HACER
 -Metodo de Pago. 
 -integrar ia.https://creatomate.com/blog/using-chatgpt-api-to-auto-create-social-media-videos-by-code
 
+-desaparicion boton "gracias por susbribirte"
+-videos que no te lleven a youtube. 
+-logo-> home y top si está en home. 
 -Paginacion.(de las de pasar pagina, asi puedo tener estructura de 9 tarjetas, pasar paginas laterales, para ipad)
 (y para movil?)
 -buscador footer
 -borrar y editar en la base de datos. 
--responsivness
+-responsivness, tablet, movil, pc...
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
 -redes sociales->quitar twitter, añadir linkedin

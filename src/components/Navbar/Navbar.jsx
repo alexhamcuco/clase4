@@ -12,6 +12,7 @@ const Navbar = ({ materiales }) => {
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
 
 
+
     return (
         <Flex className="navbar" bg="gray.700" p="1" align="center" mb="2" paddingTop="0px" justify="space-between">
 
@@ -20,6 +21,8 @@ const Navbar = ({ materiales }) => {
                 to="/home"
                 color="white"
                 mr="4"
+                onClick={() => scrollToTop()}
+
                 _hover={{ color: "red.500" }}
             >
                 <Flex className="logo-imagen" align="center">
@@ -101,5 +104,16 @@ const Navbar = ({ materiales }) => {
         </Flex>
     );
 };
+
+
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 1,
+        behavior: "smooth"
+    });
+};
+
+
 
 export default Navbar;
