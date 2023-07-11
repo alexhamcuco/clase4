@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import db from '../../../DB/firebase-config';
 import { Button, FormControl, FormLabel, Input, VStack, Fade } from '@chakra-ui/react';
+import { addToMailchimp } from '@mailchimp/mailchimp_marketing';
+
 
 function Formulario() {
 	const [nombreUsuario, setNombreUsuario] = useState('');
@@ -22,6 +24,19 @@ function Formulario() {
 		})
 			.then(() => {
 				console.log('Usuario agregado correctamente');
+
+				// // Agregar el usuario a la lista de Mailchimp
+				// addToMailchimp({
+				// 	email: correoUsuario,
+				// 	status: 'subscribed',
+				// })
+				// 	.then(() => {
+				// 		console.log('Usuario agregado a Mailchimp correctamente');
+				// 	})
+				// 	.catch((error) => {
+				// 		console.log('Error al agregar el usuario a Mailchimp:', error);
+				// 	});
+
 				setNombreUsuario('');
 				setCorreoUsuario('');
 				setMostrarMensaje(true);
