@@ -28,7 +28,7 @@ const Testimonials = () => {
 
         <Box mt="6" mb="12">
             <Text
-                bgGradient='linear(to-l, #7928CA, #FF0033)'
+                bgGradient='linear(to-l, #FF0033, #FF0033)'
                 bgClip='text'
                 fontSize='6xl'
                 fontWeight='extrabold'

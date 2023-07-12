@@ -35,7 +35,7 @@ const ImagenPortadaComponente = () => {
             <Link as={ReactRouterLink} to='/materiales/videos/retrasos-aviones'>
 
                 <Text
-                    bgGradient='linear(to-l, #7928CA, #FF0033)'
+                    bgGradient='linear(to-l,  #FF0033, #FF0033)'
                     bgClip='text'
                     fontSize='6xl'
                     fontWeight='extrabold'

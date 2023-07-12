@@ -1,5 +1,5 @@
 import { Icon, Box, Flex, Text, Link } from "@chakra-ui/react";
-import { Fa500Px, FaAccessibleIcon, FaBezierCurve, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdAddIcCall, MdFoodBank } from "react-icons/md";
 import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
 import { Link as ReactRouterLink } from "react-router-dom";
@@ -19,51 +19,25 @@ const Footer = () => {
 
     return (
         <Box bg="gray.700" color="white" py="4" px="4" mt="2">
-            <Icon as={FaArrowLeft} boxSize={6} cursor="pointer" onClick={() => goBack()} />
+            <Icon
+                as={FaArrowLeft}
+                boxSize={6}
+                cursor="pointer"
+                onClick={() => goBack()}
+                _hover={{ color: 'red' }} // Cambio de color al pasar el cursor por encima
+            />
 
 
             <Flex justify="space-between" alignItems="center">
+
                 <img className="logo-imagen" src={logoIcon} alt="Logo"
                     onClick={() => scrollToTop()}
                 />
-                <Text fontSize="sm" color="red.500">{`© ${currentYear} Spanish with Alex.`}</Text>
+
 
 
                 <Flex>
 
-                    <Column title="">
-                        <CustomLink
-                            href="https://www.youtube.com/@spanishwithalex"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Flex align="center">
-                                <Icon as={FaYoutube} mr="2" />
-                                <h2>Youtube</h2>
-                            </Flex>
-                        </CustomLink>
-                        <CustomLink
-                            href="https://www.linkedin.com/in/alex-rodr%C3%ADguez-n%C3%BA%C3%B1ez-763720115/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-
-                        >
-                            <Flex align="center">
-                                <Icon as={FaLinkedin} mr="2" />
-                                <h2>Linkedin</h2>
-                            </Flex>
-                        </CustomLink>
-                        <CustomLink
-                            href="https://www.instagram.com/spanishwithalex"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Flex align="center">
-                                <Icon as={FaInstagram} mr="2" />
-                                <h2>Instagram</h2>
-                            </Flex>
-                        </CustomLink>
-                    </Column>
 
 
                     <Column title="">
@@ -130,6 +104,49 @@ const Footer = () => {
                         >
                             About me
                         </ChakraLink>
+                    </Column>
+
+                    <Column title="">
+                        <CustomLink
+                            href="https://www.youtube.com/@spanishwithalex"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Flex align="center">
+                                <Icon as={FaYoutube} mr="2" />
+                                Youtube
+                            </Flex>
+                        </CustomLink>
+                        <CustomLink
+                            href="https://www.linkedin.com/in/alex-rodr%C3%ADguez-n%C3%BA%C3%B1ez-763720115/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+
+                        >
+                            <Flex align="center">
+                                <Icon as={FaLinkedin} mr="2" />
+                                Linkedin
+                            </Flex>
+                        </CustomLink>
+                        <CustomLink
+                            href="https://www.instagram.com/spanishwithalex"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Flex align="center">
+                                <Icon as={FaInstagram} mr="2" />
+                                Instagram
+                            </Flex>
+                        </CustomLink>
+
+                        <Text
+                            fontSize="sm" color="red.500" alignSelf="flex-start" >
+
+                            {`© ${currentYear} Spanish with Alex.`}
+
+                        </Text>
+
+
                     </Column>
                 </Flex>
             </Flex>
