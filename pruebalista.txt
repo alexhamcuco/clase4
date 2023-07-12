@@ -3,12 +3,16 @@ COSAS POR HACER
 -toogle idioma
 -Metodo de Pago. 
 -integrar ia.https://creatomate.com/blog/using-chatgpt-api-to-auto-create-social-media-videos-by-code
+-añadir mail y nombre suscriptores a lista de correo mailchimp
 
+-desaparicion boton "gracias por susbribirte"
+-videos que no te lleven a youtube. 
+-logo-> home y top si está en home. 
 -Paginacion.(de las de pasar pagina, asi puedo tener estructura de 9 tarjetas, pasar paginas laterales, para ipad)
 (y para movil?)
 -buscador footer
 -borrar y editar en la base de datos. 
--responsivness
+-responsivness, tablet, movil, pc...
 -quitar opcion todos los materiales y agregarla a link materiales
 -problema meter datos en night mode, letras blancas
 -redes sociales->quitar twitter, añadir linkedin
@@ -44,3 +48,97 @@ asi cada selecion tiene sus caracteristicas podcasts-> nivel medio (azul amarill
 -linea roja indicando durancion del ejercicio o de la pagina. 
 
 -enseñar bien es como pescar...llevarlos con el anzuelo. 
+
+
+
+
+
+
+
+
+
+
+MAILCHIMP
+
+
+https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/
+https://us21.admin.mailchimp.com/account/oauth2/
+
+
+INSTALADO DE MAILCHIMP: MIERDA?
+PS C:\Users\Alejandro\CODEANDO\React\Clase 4\clase4> npm install @mailchimp/mailchimp_marketing
+>>
+npm WARN deprecated superagent@3.8.1: Please upgrade to v7.0.2+ of superagent.  We have fixed numerous issues with streams, form-data, attach(), filesystem errors not bubbling up (ENOENT on attach()), and all tests are now passing.  See the releases tab for more information at <https://github.com/visionmedia/superagent/releases>.
+npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/android-arm@0.17.19 (node_modules\@esbuild\android-arm):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/android-arm@0.17.19: wanted {"os":"android","arch":"arm"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/android-x64@0.17.19 (node_modules\@esbuild\android-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/android-x64@0.17.19: wanted {"os":"android","arch":"x64"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/android-arm64@0.17.19 (node_modules\@esbuild\android-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/android-arm64@0.17.19: wanted {"os":"android","arch":"arm64"} (current: {"os":"win32","arch":"x64"})npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/freebsd-arm64@0.17.19 (node_modules\@esbuild\freebsd-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/freebsd-arm64@0.17.19: wanted {"os":"freebsd","arch":"arm64"} (current: {"os":"win32","arch":"x64"})npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-arm@0.17.19 (node_modules\@esbuild\linux-arm):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-arm@0.17.19: wanted {"os":"linux","arch":"arm"} (current: {"os":"win32","arch":"x64"})        
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/darwin-arm64@0.17.19 (node_modules\@esbuild\darwin-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/darwin-arm64@0.17.19: wanted {"os":"darwin","arch":"arm64"} (current: {"os":"win32","arch":"x64"})  
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/darwin-x64@0.17.19 (node_modules\@esbuild\darwin-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/darwin-x64@0.17.19: wanted {"os":"darwin","arch":"x64"} (current: {"os":"win32","arch":"x64"})      
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/freebsd-x64@0.17.19 (node_modules\@esbuild\freebsd-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/freebsd-x64@0.17.19: wanted {"os":"freebsd","arch":"x64"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-arm64@0.17.19 (node_modules\@esbuild\linux-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-arm64@0.17.19: wanted {"os":"linux","arch":"arm64"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-ia32@0.17.19 (node_modules\@esbuild\linux-ia32):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-ia32@0.17.19: wanted {"os":"linux","arch":"ia32"} (current: {"os":"win32","arch":"x64"})      
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-ppc64@0.17.19 (node_modules\@esbuild\linux-ppc64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-ppc64@0.17.19: wanted {"os":"linux","arch":"ppc64"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-mips64el@0.17.19 (node_modules\@esbuild\linux-mips64el):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-mips64el@0.17.19: wanted {"os":"linux","arch":"mips64el"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-loong64@0.17.19 (node_modules\@esbuild\linux-loong64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-loong64@0.17.19: wanted {"os":"linux","arch":"loong64"} (current: {"os":"win32","arch":"x64"})npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-riscv64@0.17.19 (node_modules\@esbuild\linux-riscv64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-riscv64@0.17.19: wanted {"os":"linux","arch":"riscv64"} (current: {"os":"win32","arch":"x64"})npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-x64@0.17.19 (node_modules\@esbuild\linux-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-x64@0.17.19: wanted {"os":"linux","arch":"x64"} (current: {"os":"win32","arch":"x64"})        
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-s390x@0.17.19 (node_modules\@esbuild\linux-s390x):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-s390x@0.17.19: wanted {"os":"linux","arch":"s390x"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/netbsd-x64@0.17.19 (node_modules\@esbuild\netbsd-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/netbsd-x64@0.17.19: wanted {"os":"netbsd","arch":"x64"} (current: {"os":"win32","arch":"x64"})      
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/win32-arm64@0.17.19 (node_modules\@esbuild\win32-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/win32-arm64@0.17.19: wanted {"os":"win32","arch":"arm64"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/sunos-x64@0.17.19 (node_modules\@esbuild\sunos-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/sunos-x64@0.17.19: wanted {"os":"sunos","arch":"x64"} (current: {"os":"win32","arch":"x64"})        
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/openbsd-x64@0.17.19 (node_modules\@esbuild\openbsd-x64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/openbsd-x64@0.17.19: wanted {"os":"openbsd","arch":"x64"} (current: {"os":"win32","arch":"x64"})    
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/win32-ia32@0.17.19 (node_modules\@esbuild\win32-ia32):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/win32-ia32@0.17.19: wanted {"os":"win32","arch":"ia32"} (current: {"os":"win32","arch":"x64"})      
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ @mailchimp/mailchimp_marketing@3.0.80
+added 25 packages from 22 contributors and audited 531 packages in 6.589s
+
+88 packages are looking for funding
+  run `npm fund` for details
+
+found 9 vulnerabilities (4 moderate, 5 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+
+ALTERNATIVAS A MAILCHIMP CON TELEGRAM: 
+
+Si estás buscando alternativas a Mailchimp que también te permitan gestionar mensajes en Telegram, aquí tienes algunas opciones:
+
+GetResponse: Es una plataforma de marketing por correo electrónico que también ofrece funciones
+ de automatización del marketing. Puedes crear y enviar campañas de correo electrónico, además
+  de gestionar mensajes en Telegram utilizando la integración de bots de Telegram.
+
+Sendinblue: Es una herramienta de marketing todo en uno que incluye correo electrónico,
+ SMS, chat y más. Puedes enviar correos electrónicos y gestionar mensajes en Telegram 
+ utilizando su funcionalidad de chat. Sendinblue también ofrece automatización del marketing
+  y análisis detallados.
+
+ActiveCampaign: Esta plataforma se centra en la automatización del marketing y ofrece 
+una amplia gama de funciones, incluyendo correo electrónico, segmentación de audiencia
+, pruebas A/B y más. Aunque no tiene una integración directa con Telegram, puedes utilizar
+ servicios de terceros, como Zapier, para conectar ActiveCampaign con Telegram.
+
+ConvertKit: Es una plataforma de marketing por correo electrónico diseñada específicamente
+ para bloggers y creadores de contenido. Aunque no ofrece una integración nativa con Telegram,
+  puedes utilizar servicios de terceros como Zapier o Integromat para conectar ConvertKit con Telegram.

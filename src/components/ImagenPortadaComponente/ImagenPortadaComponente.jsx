@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Text, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import imagenPortada from '../../assets/imagenes/cards/avionRetraso.jpg'
+import { Link as ReactRouterLink } from "react-router-dom";
 
 const ImagenPortadaComponente = () => {
     //  Debes desestructurar la prop imagenPortada poniendole { imagenPortada }  en el
@@ -23,7 +24,7 @@ const ImagenPortadaComponente = () => {
                     animate={{ y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <Link href="/materiales/Videos/retrasos-aviones">
+                    <Link as={ReactRouterLink} to='/materiales/videos/retrasos-aviones'>
 
                         <img src={imagenPortada} alt="Imagen principal" />
                     </Link>
@@ -31,7 +32,7 @@ const ImagenPortadaComponente = () => {
                 </motion.div>
             </Box>
 
-            <Link href="/materiales/Videos/retrasos-aviones">
+            <Link as={ReactRouterLink} to='/materiales/videos/retrasos-aviones'>
 
                 <Text
                     bgGradient='linear(to-l, #7928CA, #FF0033)'

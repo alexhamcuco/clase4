@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import db from '../../../DB/firebase-config';
-import { Button, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react';
+import { Button, FormControl, FormLabel, Input, VStack, Fade } from '@chakra-ui/react';
+import { addToMailchimp } from '@mailchimp/mailchimp_marketing';
+
 
 function Formulario() {
 	const [nombreUsuario, setNombreUsuario] = useState('');
-	// const [edadUsuario, setEdadUsuario] = useState('');
 	const [correoUsuario, setCorreoUsuario] = useState('');
 	const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
@@ -15,22 +16,34 @@ function Formulario() {
 		event.preventDefault();
 
 		console.log('Nombre: ', nombreUsuario);
-		// console.log('Edad: ', edadUsuario);
 		console.log('Correo: ', correoUsuario);
 
-		// Agregar nuevo usuario
 		addDoc(colRef, {
 			nombre: nombreUsuario,
-			// edad: edadUsuario,
 			correo: correoUsuario,
 		})
 			.then(() => {
 				console.log('Usuario agregado correctamente');
+
+				// // Agregar el usuario a la lista de Mailchimp
+				// addToMailchimp({
+				// 	email: correoUsuario,
+				// 	status: 'subscribed',
+				// })
+				// 	.then(() => {
+				// 		console.log('Usuario agregado a Mailchimp correctamente');
+				// 	})
+				// 	.catch((error) => {
+				// 		console.log('Error al agregar el usuario a Mailchimp:', error);
+				// 	});
+
 				setNombreUsuario('');
-				// setEdadUsuario('');
 				setCorreoUsuario('');
 				setMostrarMensaje(true);
 
+				setTimeout(() => {
+					setMostrarMensaje(false);
+				}, 2000);
 			})
 			.catch((error) => {
 				console.log('Error al agregar el usuario:', error);
@@ -54,18 +67,6 @@ function Formulario() {
 								backgroundColor="white"
 							/>
 						</FormControl>
-						{/* <FormControl>
-							<FormLabel htmlFor="edadUsuario">Edad:</FormLabel>
-							<Input
-								type="text"
-								id="edadUsuario"
-								name="edadUsuario"
-								required
-								value={edadUsuario}
-								onChange={(event) => setEdadUsuario(event.target.value)}
-								backgroundColor="white"
-							/>
-						</FormControl> */}
 						<FormControl>
 							<FormLabel htmlFor="correoUsuario">Correo:</FormLabel>
 							<Input
@@ -83,12 +84,11 @@ function Formulario() {
 						</Button>
 					</VStack>
 				</form>
-				{mostrarMensaje && (
+				<Fade in={mostrarMensaje} duration={1900} transition="ease-in">
 					<div style={{ backgroundColor: 'green', padding: '20px', marginTop: '20px', borderRadius: '5px' }}>
-						<h6> ¡GRACIAS POR SUSCRIBIRTE!</h6>
-
+						<h6>¡GRACIAS POR SUSCRIBIRTE!</h6>
 					</div>
-				)}
+				</Fade>
 			</div>
 		</div>
 	);

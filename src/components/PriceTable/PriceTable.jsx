@@ -1,6 +1,8 @@
 import React from 'react';
-import { Box, Heading, Text, Button, List, ListItem, Icon } from '@chakra-ui/react';
+import { Box, Heading, Text, Button, List, ListItem, Icon, Link } from '@chakra-ui/react';
 import { CheckIcon } from '@chakra-ui/icons';
+import { Link as ReactRouterLink } from "react-router-dom";
+
 
 const PriceTable = () => {
     return (
@@ -56,9 +58,14 @@ const PriceTable = () => {
                     Earn points and win prizes or discounts.
                 </ListItem>
             </List>
-            <Button colorScheme="green" size="md" mx="auto" display="block" mb={4} href="https://your-homepage-url">
-                Join Spanish with Alex
-            </Button>
+
+
+            <Link as={ReactRouterLink} to='/suscripcion'>
+
+                <Button colorScheme="red" size="lg" mx="auto" display="block" mb={4} >
+                    Join Spanish with Alex
+                </Button>
+            </Link>
             <Text textAlign="center" color="gray.500" fontSize="sm">
                 First month 20€ Then 40/month. Cancel anytime.
             </Text>

@@ -1,4 +1,4 @@
-import { Link as ReactRouterLink } from "react-router-dom";
+import { Link, Link as ReactRouterLink } from "react-router-dom";
 import { Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
@@ -12,6 +12,7 @@ const Navbar = ({ materiales }) => {
     const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
 
 
+
     return (
         <Flex className="navbar" bg="gray.700" p="1" align="center" mb="2" paddingTop="0px" justify="space-between">
 
@@ -20,6 +21,8 @@ const Navbar = ({ materiales }) => {
                 to="/home"
                 color="white"
                 mr="4"
+                onClick={() => scrollToTop()}
+
                 _hover={{ color: "red.500" }}
             >
                 <Flex className="logo-imagen" align="center">
@@ -58,14 +61,15 @@ const Navbar = ({ materiales }) => {
                 ))} */}
                 {/* //prueba menú */}
                 <Menu >
-                    <MenuButton as={ChakraLink} color="white" mr="4" _hover={{ color: "red.500" }}>
-                        Materiales
-                    </MenuButton>
+                    <Link as={ReactRouterLink} to='/materiales'>
+
+                        <MenuButton as={ChakraLink} color="white" mr="4" _hover={{ color: "red.500" }}>
+                            Materiales
+                        </MenuButton>
+                    </Link>
                     <MenuList>
 
-                        <MenuItem as={ReactRouterLink} to="/materiales" _hover={{ bg: "red.500", color: "white" }}>
-                            Todos los materiales
-                        </MenuItem>
+
 
                         {uniqueTypes.map((tipo) => (
                             <MenuItem key={tipo} as={ReactRouterLink} to={`/materiales/${tipo}`}
@@ -101,5 +105,16 @@ const Navbar = ({ materiales }) => {
         </Flex>
     );
 };
+
+
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 1,
+        behavior: "smooth"
+    });
+};
+
+
 
 export default Navbar;

@@ -13,6 +13,7 @@ const TextoComponente = () => {
 
 
             <Text fontSize='xl' sx={{ color: 'green', marginTop: '20px', fontWeight: 'bold' }}> SUSCRÍBETE AQUÍ. ¡ES GRATIS! </Text>
+            {/* <Text fontSize='xl' sx={{ color: 'green', marginTop: '20px', fontWeight: 'bold' }}> SOLO POR TIEMPO LIMITADO </Text> */}
 
             <Formulario />
 

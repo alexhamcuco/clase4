@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Text, Image, HStack, Button } from '@chakra-ui/react';
+import { Box, Text, Image, HStack, Button, Link } from '@chakra-ui/react';
+import { Link as ReactRouterLink } from "react-router-dom";
 
 const ReservaFacil = () => {
     return (
@@ -10,8 +11,8 @@ const ReservaFacil = () => {
                 borderRadius="lg"
                 overflow="hidden"
                 shadow="md"
-                bgGradient="linear(to-b, red, #764ba2)"
-                color="white"
+                bgGradient="linear(to-b, grey.500, grey)"
+                color="grey.500"
             >
                 <Image src="https://cdn.mos.cms.futurecdn.net/pShGA8P5jT4FW5xmgPJXmn.jpg" alt="Calendario" />
                 <Box p="4">
@@ -33,9 +34,11 @@ const ReservaFacil = () => {
                         <Text fontWeight="bold">- Confirmación inmediata:</Text>
                         <Text ml="4">Recibirás una confirmación instantánea de tu reserva, sin esperas innecesarias.</Text>
                     </Box>
-                    <Button colorScheme="white" variant="outline" mt="4">
-                        Ir a Reservas
-                    </Button>
+                    <Link as={ReactRouterLink} to='/suscripcion'>
+                        <Button colorScheme="red" size="lg" mt="4">
+                            Ir a Suscripción
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
 
@@ -45,8 +48,8 @@ const ReservaFacil = () => {
                 borderRadius="lg"
                 overflow="hidden"
                 shadow="md"
-                bgGradient="linear(to-b, red, #764ba2)"
-                color="white"
+                bgGradient="linear(to-b, grey.500, grey)"
+                color="grey.500"
             >
                 <Image src="https://cdn.mos.cms.futurecdn.net/pShGA8P5jT4FW5xmgPJXmn.jpg" alt="Merch" />
                 <Box p="4">
@@ -67,9 +70,12 @@ const ReservaFacil = () => {
                         <Text fontWeight="bold">- Garantía de satisfacción:</Text>
                         <Text ml="4">Si no estás satisfecho con tu compra, te ofrecemos devoluciones y reembolsos fáciles.</Text>
                     </Box>
-                    <Button colorScheme="white" variant="outline" mt="4">
-                        Ir a Tienda
-                    </Button>
+                    <Link as={ReactRouterLink} to='/suscripcion'>
+
+                        <Button colorScheme="red" size="lg" mt="4">
+                            Ir a Tienda
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
 
@@ -79,15 +85,15 @@ const ReservaFacil = () => {
                 borderRadius="lg"
                 overflow="hidden"
                 shadow="md"
-                bgGradient="linear(to-b, red, #764ba2)"
-                color="white"
+                bgGradient="linear(to-b, grey.500, grey)"
+                color="grey.500"
             >
                 <Image src="https://cdn.mos.cms.futurecdn.net/pShGA8P5jT4FW5xmgPJXmn.jpg" alt="Material gratuito" />
                 <Box p="4">
                     <Text fontSize="sm">Descarga material gratuito</Text>
                     <Text mt="2">
                         Accede a nuestra biblioteca de recursos gratuitos y descarga material exclusivo para ayudarte en tus proyectos
-                        y aprendizaje.
+                        y aprendizaje. Y vamos a aumentar una linea más para que todas las tarjetas sean.
                     </Text>
                     <Box mt="4">
                         <Text fontWeight="bold">- Recursos de calidad:</Text>
@@ -101,9 +107,12 @@ const ReservaFacil = () => {
                         <Text fontWeight="bold">- Sin costos ocultos:</Text>
                         <Text ml="4">Todo nuestro material gratuito es realmente gratuito, sin suscripciones ni pagos adicionales.</Text>
                     </Box>
-                    <Button colorScheme="white" variant="outline" mt="4">
-                        Ir a Descargas
-                    </Button>
+                    <Link as={ReactRouterLink} to='/suscripcion'>
+
+                        <Button colorScheme="red" size="lg" mt="4">
+                            Ir a Descargas
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
         </HStack>
