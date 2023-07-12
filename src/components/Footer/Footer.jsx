@@ -1,5 +1,5 @@
 import { Icon, Box, Flex, Text, Link } from "@chakra-ui/react";
-import { Fa500Px, FaAccessibleIcon, FaBezierCurve, FaThermometer } from "react-icons/fa";
+import { Fa500Px, FaAccessibleIcon, FaBezierCurve, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdAddIcCall, MdFoodBank } from "react-icons/md";
 import logoIcon from '../../assets/imagenes/favicon/favicon4.ico'; // Asegúrate de proporcionar la ruta correcta al archivo .ico
 import { Link as ReactRouterLink } from "react-router-dom";
@@ -14,41 +14,43 @@ const goBack = () => {
 
 
 const Footer = () => {
+    // Obtener el año actual
+    const currentYear = new Date().getFullYear();
+
     return (
         <Box bg="gray.700" color="white" py="4" px="4" mt="2">
             <Icon as={FaArrowLeft} boxSize={6} cursor="pointer" onClick={() => goBack()} />
 
-            <img className="logo-imagen" src={logoIcon} alt="Logo"
-                onClick={() => scrollToTop()}
-            />
-
-
 
             <Flex justify="space-between" alignItems="center">
+                <img className="logo-imagen" src={logoIcon} alt="Logo"
+                    onClick={() => scrollToTop()}
+                />
+                <Text fontSize="sm" color="red.500">{`© ${currentYear} Spanish with Alex.`}</Text>
 
-                <Text fontSize="sm">© 2023 Spanish with Alex.</Text>
+
                 <Flex>
 
-                    <Column title="Follow">
+                    <Column title="">
                         <CustomLink
                             href="https://www.youtube.com/@spanishwithalex"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <Flex align="center">
-                                <Icon as={MdAddIcCall} mr="2" />
+                                <Icon as={FaYoutube} mr="2" />
                                 <h2>Youtube</h2>
                             </Flex>
                         </CustomLink>
                         <CustomLink
-                            href="https://twitter.com/spanishwithalex"
+                            href="https://www.linkedin.com/in/alex-rodr%C3%ADguez-n%C3%BA%C3%B1ez-763720115/"
                             target="_blank"
                             rel="noopener noreferrer"
 
                         >
                             <Flex align="center">
-                                <Icon as={Fa500Px} mr="2" />
-                                <h2>Twitter</h2>
+                                <Icon as={FaLinkedin} mr="2" />
+                                <h2>Linkedin</h2>
                             </Flex>
                         </CustomLink>
                         <CustomLink
@@ -57,18 +59,21 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <Flex align="center">
-                                <Icon as={MdFoodBank} mr="2" />
+                                <Icon as={FaInstagram} mr="2" />
                                 <h2>Instagram</h2>
                             </Flex>
                         </CustomLink>
                     </Column>
-                    <Column title="Condiciones Legales">
+
+
+                    <Column title="">
+
                         <ChakraLink
                             as={ReactRouterLink}
                             to="/terminos-y-condiciones"
-                            color="white"
+                            color="red"
                             mr="4"
-                            _hover={{ color: "red.500" }}
+                            _hover={{ color: "white" }}
                             onClick={() => scrollToTop()}
                         >
                             Condiciones
@@ -77,9 +82,9 @@ const Footer = () => {
                         <ChakraLink
                             as={ReactRouterLink}
                             to="/politica-de-privacidad"
-                            color="white"
+                            color="red"
                             mr="4"
-                            _hover={{ color: "red.500" }}
+                            _hover={{ color: "white" }}
                             onClick={() => scrollToTop()}
 
                         >
@@ -89,22 +94,25 @@ const Footer = () => {
                         <ChakraLink
                             as={ReactRouterLink}
                             to="/cookies"
-                            color="white"
+                            color="red"
                             mr="4"
-                            _hover={{ color: "red.500" }}
+                            _hover={{ color: "white" }}
                             onClick={() => scrollToTop()}
 
                         >
                             Cookies
                         </ChakraLink>
                     </Column>
-                    <Column title="Contacto">
+
+
+                    <Column title="">
+
                         <ChakraLink
                             as={ReactRouterLink}
                             to="/contacto"
-                            color="white"
+                            color="red"
                             mr="4"
-                            _hover={{ color: "red.500" }}
+                            _hover={{ color: "white" }}
                             onClick={() => scrollToTop()}
 
                         >
@@ -114,9 +122,9 @@ const Footer = () => {
                         <ChakraLink
                             as={ReactRouterLink}
                             to="/alejandro-rodriguez"
-                            color="white"
+                            color="red"
                             mr="4"
-                            _hover={{ color: "red.500" }}
+                            _hover={{ color: "white" }}
                             onClick={() => scrollToTop()}
 
                         >
@@ -125,6 +133,7 @@ const Footer = () => {
                     </Column>
                 </Flex>
             </Flex>
+
         </Box>
     );
 };

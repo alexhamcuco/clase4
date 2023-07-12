@@ -1,4 +1,4 @@
-import { Link as ReactRouterLink } from "react-router-dom";
+import { Link, Link as ReactRouterLink } from "react-router-dom";
 import { Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
@@ -61,14 +61,15 @@ const Navbar = ({ materiales }) => {
                 ))} */}
                 {/* //prueba menú */}
                 <Menu >
-                    <MenuButton as={ChakraLink} color="white" mr="4" _hover={{ color: "red.500" }}>
-                        Materiales
-                    </MenuButton>
+                    <Link as={ReactRouterLink} to='/materiales'>
+
+                        <MenuButton as={ChakraLink} color="white" mr="4" _hover={{ color: "red.500" }}>
+                            Materiales
+                        </MenuButton>
+                    </Link>
                     <MenuList>
 
-                        <MenuItem as={ReactRouterLink} to="/materiales" _hover={{ bg: "red.500", color: "white" }}>
-                            Todos los materiales
-                        </MenuItem>
+
 
                         {uniqueTypes.map((tipo) => (
                             <MenuItem key={tipo} as={ReactRouterLink} to={`/materiales/${tipo}`}
